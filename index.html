@@ -1,11 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortFolio</title>
+    <meta charset="utf-8">
+    <title>PortFolio L.I.Carlos</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <h2 id="Nombre">Carlos Daniel Duarte León</h2>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-2 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-5">
+            <h1 class="m-0 display-5"><span class="text-primary">Carlos</span>Portfolio</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Inicio</a>
+                <a href="#about" class="nav-item nav-link">Información</a>
+                <a href="#qualification" class="nav-item nav-link">Educación / Experiencia</a>
+                <a href="#skill" class="nav-item nav-link">Conocimientos / Habilidades</a>
+                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <a href="#contact" class="nav-item nav-link">Contacto</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/fotoPerfil.jpeg" alt="">
+                </div>
+                <div class="col-lg-7 text-center text-lg-left">
+                    <h3 class="text-white font-weight-normal mb-3">Hola, mi nombre es</h3>
+                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">
+                        L.I. Carlos Daniel Duarte León</h1>
+                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <div class="typed-text d-none">Desarrollador Web FullStack</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="position-absolute text-uppercase text-primary">Información</h1>
+            </div><br><br>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="img/iconInfo.jpg" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-4">Desarrollador Web FullStack</h3>
+                    <p>Soy un profesional con amplia experiencia en el sector y excelentes
+                        habilidades de liderazgo y gestión de equipos. A lo largo de mi
+                        carrera, he destacado por mi capacidad para identificar
+                        oportunidades de negocio, optimizar procesos y maximizar los
+                        beneficios de las empresas. Mi objetivo es seguir desarrollándome
+                        profesionalmente. Además, me caracterizo por ser un solucionador
+                        de problemas, capaz de priorizar y gestionar proyectos de manera
+                        efectiva. Estoy buscando una oportunidad para crecer y dar lo mejor
+                        de mí.
+                    </p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2">
+                            <h6>Nombre: <span class="text-secondary">Carlos Daniel Duarte León</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Estudios: <span class="text-secondary">Licenciatura en Informática</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Teléfono: <span class="text-secondary">+52 6678192130</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Email: <span class="text-secondary">li.carlosduarte98@gmail.com</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Dirección: <span class="text-secondary">Culiacán, Sinaloa, MX</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="position-absolute text-uppercase text-primary">Educación / Experiencia</h1>
+            </div><br><br>
+            <div class="row align-items-start">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Educación</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Licenciatura en Informática</h5>
+                            <p class="mb-2"><strong>Universidad Autónoma de Sinaloa</strong> | <small>2016 -
+                                    2021</small></p>
+                            <p>Facultad de Informática Culiacán</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Experiencia Laboral</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Programador/Analista de incidencias/Ingeniero de Servicios
+                            </h5>
+                            <p class="mb-2"><strong>Afore Coppel</strong> | <small>2021 - 2024</small></p>
+                            <ul>
+                                <li>Revisión y Análisis de Sistemas</li>
+                                <li>Revisión de flujo de la información del cliente</li>
+                                <li>Revisión de permisos de accesos a bases de datos</li>
+                                <li>Consultas e integración de información en bases de datos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Qualification End -->
+
+
+    <!-- Skill Start -->
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="position-absolute text-uppercase text-primary" style="-webkit-text-stroke: 1px #dee2e6;">
+                    Conocimientos / Habilidades</h1>
+            </div><br><br>
+            <div class="row align-items-center">
+                <div class="col-md">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <img src="img/htmlIcon.png" alt="icono HTML"
+                            style="border-radius: 50px; width: 100px; height: 100px;"> <br>
+                        <h6 class="font-weight-bold">HTML</h6>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <img src="img/javaScriptIcon.png" alt="icono HTML" style=" width: 100px; height: 100px;"> <br>
+                        <h6 class="font-weight-bold">JavaScript</h6>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <img src="img/pythonIcon.png" alt="icono HTML"
+                            style="border-radius: 50px; width: 100px; height: 100px;"> <br>
+                        <h6 class="font-weight-bold">Python</h6>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <img src="img/postgreSqlIcon.png" alt="icono HTML"
+                            style="border-radius: 50px; width: 100px; height: 100px;"> <br>
+                        <h6 class="font-weight-bold">PostgreSql</h6>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <img src="img/MySqlIcon.png" alt="icono HTML"
+                            style="border-radius: 50px; width: 100px; height: 100px;"> <br>
+                        <h6 class="font-weight-bold">MySQL</h6>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <img src="img/gitIcon.png" alt="icono HTML"
+                            style="border-radius: 50px; width: 100px; height: 100px;"> <br>
+                        <h6 class="font-weight-bold">Git</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Skill End -->
+
+        <!-- Portfolio Start -->
+        <div class="container-fluid pt-5 pb-3" id="portfolio">
+            <div class="container">
+                <div class="position-relative d-flex align-items-center justify-content-center">
+                    <h1 class="position-absolute text-uppercase text-primary">Mi Portfolio</h1>
+                </div><br><br>
+                <div class="row">
+                    <div class="col-12 text-center mb-2">
+                        <h1 class="display-2 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">
+                            PROXIMAMENTE</h1>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <!-- Portfolio End -->
+        <!-- Contact Start -->
+        <div class="container-fluid py-5" id="contact">
+            <div class="container">
+                <div class="position-relative d-flex align-items-center justify-content-center">
+                    <h1 class="position-absolute text-uppercase text-primary">Contacto</h1>
+                </div><br><br>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="col-md">
+                            <div class="d-flex align-items-start justify-content-start mb-4">
+                                <a href="https://github.com/kinio-1998">
+                                    <img src="img/gitHubIcon.png" alt="icono GitHub" style=" width: 70px; height: 70px;"> 
+                                    kinio-1998
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col lg 4">
+                        <div class="d-flex align-items-end justify-content-start mb-4">    
+                            <img src="img/mailIcon.png" alt="icono mail" style=" width: 50px; height: 50px;">
+                            <p>li.carlosduarte98@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="col-md">
+                            <div class="d-flex align-items-center justify-content-center mb-4">
+                                <a href="https://www.linkedin.com/in/licarlosduarte">
+                                    <img src="img/linkedInIcon.png" alt="icono mail" style=" width: 50px; height: 50px;">
+                                    Carlos Daniel Duarte León
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/carlos.duarteleon"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="www.linkedin.com/in/licarlosduarte"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/kiniorap/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="#">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights
+                Reserved. Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML
+                    Codex</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
