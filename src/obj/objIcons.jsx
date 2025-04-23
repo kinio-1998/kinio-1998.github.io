@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt } from 'react-icons/fa'
-import { SiTailwindcss, SiVite } from 'react-icons/si'
+import { SiTailwindcss, SiVite, SiGooglesheets, SiGoogleappsscript  } from 'react-icons/si'
 export const techIcons = {
     HTML: <FaHtml5 className="text-orange-600" />,
     CSS: <FaCss3Alt className="text-blue-600" />,
@@ -8,4 +8,6 @@ export const techIcons = {
     Tailwind: <SiTailwindcss className="text-sky-400" />,
     Git: <FaGitAlt className="text-red-500" />,
     Vite: <SiVite className="text-purple-400" />,
+    "Apps Script": <SiGoogleappsscript className='text-green-800'/>,
+    "Google Sheets": <SiGooglesheets className='text-green-800'/>,
 }

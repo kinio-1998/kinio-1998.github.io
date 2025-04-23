@@ -9,7 +9,8 @@
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "commit": "node commit.cjs"
+    "commit": "node commit.cjs",
+    "actualizar":"git pull origin main"
   },
   "dependencies": {
     "framer-motion": "^12.7.4",

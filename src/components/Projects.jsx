@@ -1,10 +1,12 @@
+import { useState } from "react";
 import { useLanguage } from "../context/LanguajeContent";
 import { techIcons } from "../obj/objIcons";
 import { objProjects } from "../obj/objProjects";
+import { ModalImg } from "./modalIMG";
 import { motion } from "framer-motion";
- 
 
-const Projects = ({ traducciones }) => {
+export const Projects = ({ traducciones }) => {
+  const [selectedPreview,setSelectedPreview] = useState(null);
   const { language } = useLanguage();
   return (
     <section id="projects" className="py-10 px-5 bg-gray-100 dark:bg-gray-100">
@@ -24,8 +26,10 @@ const Projects = ({ traducciones }) => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-md mb-4"
+              className="w-full h-48 object-contain rounded-md mb-4 bg-white cursor-pointer hover:brightness-90 transition duration-200"
+              onClick={() => setSelectedPreview(project.imageCode)}
             />
+              <ModalImg image={selectedPreview} onClose={() => setSelectedPreview(null)} />
             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {project.description}
@@ -52,4 +56,3 @@ const Projects = ({ traducciones }) => {
   );
 };
 
-export default Projects;
