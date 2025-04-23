@@ -14,6 +14,10 @@ export const objTraducciones = {
     projects:{
         es: { title: "Proyectos", lblProject: "Ver Proyecto"},
         en: { title: "Projects", lblProject: "See Project"},
+    },
+    skills:{
+        es:{title:"Habilidades"},
+        en:{title:"Skills"}
     }
 
 }

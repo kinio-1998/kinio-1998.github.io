@@ -14,8 +14,8 @@ function App() {
       <Navbar traducciones={objTraducciones.nav[language]} toggleLanguage={toggleLanguage} language={language}/>
       <Hero traducciones={objTraducciones.hero[language]}/>
       <About  traducciones={objTraducciones.about[language]}/>
+      <Skills traducciones={objTraducciones.skills[language]}/>
       <Projects traducciones={objTraducciones.projects[language]}/>
-      <Skills/>
     </>
   );
 }
