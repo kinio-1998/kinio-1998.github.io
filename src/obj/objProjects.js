@@ -6,6 +6,7 @@ export const objProjects = {
             description: "Sitio personal donde muestro mis proyectos y habilidades.",
             image: "../assets/img/bot.png",
             link: "https://tuportafolio.com",
+            techs: ['React', 'Tailwind'],
         },
         {
             id: 2,
@@ -13,6 +14,7 @@ export const objProjects = {
             description: "Automatización de respuestas y servicios vía WhatsApp.",
             image: "../assets/img/bot.png",
             link: "https://github.com/kinio-1998/whatsapp-bot",
+            techs: ['React', 'Tailwind'],
         },
     ],
     en: [
@@ -22,6 +24,7 @@ export const objProjects = {
             description: "Personal site where I showcase my projects and skills.",
             image: "../assets/img/bot.png",
             link: "https://tuportafolio.com",
+            techs: ['React', 'Tailwind'],
         },
         {
             id: 2,
@@ -29,6 +32,7 @@ export const objProjects = {
             description: "Automates responses and services via WhatsApp.",
             image: "../assets/img/bot.png",
             link: "https://github.com/kinio-1998/whatsapp-bot",
+            techs: ['React', 'Tailwind'],
         },
     ]
 } 
