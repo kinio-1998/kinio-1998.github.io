@@ -5,8 +5,9 @@ export const Skills = ({traducciones}) => {
   return (
     <section className="py-16 px-4 bg-gray-100 dark:bg-neutral-900" id="skills">
       <h2 className="text-3xl font-bold text-white text-center mb-10">{traducciones.title}</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-items-center">
-        {techIcons.skills.map((skill) => (
+      <div className='max-h-96 overflow-y-auto'>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center">
+        {techIcons.list.map((skill) => (
           <motion.div
             key={skill.id}
             whileHover={{ scale: 1.1 }}
@@ -20,6 +21,7 @@ export const Skills = ({traducciones}) => {
             <p className="text-center text-sm text-white">{skill.name}</p>
           </motion.div>
         ))}
+      </div>
       </div>
     </section>
   )

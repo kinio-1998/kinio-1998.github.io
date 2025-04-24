@@ -1,33 +1,81 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt } from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiVite,
-  SiGooglesheets,
-  SiGoogleappsscript,
-} from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt,FaNodeJs,FaWhatsapp, FaPython   } from "react-icons/fa";
+import { SiTailwindcss, SiVite, SiGooglesheets, SiGoogleappsscript, SiPostgresql,SiMysql  } from "react-icons/si";
 export const techIcons = {
-  skills: [
-    { id: 1, name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
-    { id: 2, name: "CSS", icon: <FaCss3Alt className="text-blue-600" /> },
-    { id: 3, name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
-    { id: 4, name: "React", icon: <FaReact className="text-cyan-400" /> },
+  list: [
+    {
+      id: 1,
+      name: "HTML",
+      icon: <FaHtml5 className="text-orange-600" />,
+    },
+    {
+      id: 2,
+      name: "CSS",
+      icon: <FaCss3Alt className="text-blue-600" />,
+    },
+    {
+      id: 3,
+      name: "JavaScript",
+      icon: <FaJs className="text-yellow-400" />,
+    },
+    {
+      id: 4,
+      name: "React",
+      icon: <FaReact className="text-cyan-400" />,
+    },
     {
       id: 5,
       name: "Tailwind",
       icon: <SiTailwindcss className="text-sky-400" />,
     },
-    { id: 6, name: "Git", icon: <FaGitAlt className="text-red-500" /> },
-    { id: 7, name: "Vite", icon: <SiVite className="text-purple-400" /> },
+    {
+      id: 6,
+      name: "Git",
+      icon: <FaGitAlt className="text-red-500" />,
+    },
+    {
+      id: 7,
+      name: "Vite",
+      icon: <SiVite className="text-purple-400" />,
+    },
+    {
+      id: 8,
+      name: "Apps Script",
+      icon: <SiGoogleappsscript className="text-green-800" />,
+    },
+    {
+      id: 9,
+      name: "Google Sheets",
+      icon: <SiGooglesheets className="text-green-800" />,
+    },
+    {
+      id: 10,
+      name: "Node",
+      icon: <FaNodeJs className="text-green-900" />,
+    },
+    {
+      id: 11,
+      name: "Whatsapp-js",
+      icon: <FaWhatsapp className="text-green-500" />,
+    },
+    {
+      id: 12,
+      name: "Python",
+      icon: <FaPython   className="text-orange-500" />,
+    },
+    {
+      id: 13,
+      name: "PostgreSql",
+      icon: <SiPostgresql  className="text-blue-500" />,
+    },
+    {
+      id: 14,
+      name: "MySql",
+      icon: <SiMysql   className="text-blue-500" />,
+    },
   ],
-  iconProject: {
-    HTML: <FaHtml5 className="text-orange-600" />,
-    CSS: <FaCss3Alt className="text-blue-600" />,
-    JavaScript: <FaJs className="text-yellow-400" />,
-    React: <FaReact className="text-cyan-400" />,
-    Tailwind: <SiTailwindcss className="text-sky-400" />,
-    Git: <FaGitAlt className="text-red-500" />,
-    Vite: <SiVite className="text-purple-400" />,
-    "Apps Script": <SiGoogleappsscript className="text-green-800" />,
-    "Google Sheets": <SiGooglesheets className="text-green-800" />,
+
+  getIconByName(name) {
+    return this.list.find((item) => item.name === name)?.icon || null;
   },
 };
+

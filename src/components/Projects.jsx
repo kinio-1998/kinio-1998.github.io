@@ -27,7 +27,7 @@ export const Projects = ({ traducciones }) => {
               src={project.image}
               alt={project.title}
               className="w-full h-48 object-contain rounded-md mb-4 bg-white cursor-pointer hover:brightness-90 transition duration-200"
-              onClick={() => setSelectedPreview(project.imageCode)}
+              onClick={() => setSelectedPreview(project.image)}
             />
             <ModalImg
               image={selectedPreview}
@@ -36,7 +36,7 @@ export const Projects = ({ traducciones }) => {
               project={project}
             />
 
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-center">{project.title}</h3>
 
             <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
               {project.description}
@@ -45,7 +45,7 @@ export const Projects = ({ traducciones }) => {
             <div className="flex gap-2 mb-4 justify-center">
               {project.techs.map((tech, index) => (
                 <span key={index} className="text-xl">
-                  {techIcons.iconProject[tech]}
+                  {techIcons.getIconByName(tech)}
                 </span>
               ))}
             </div>
