@@ -6,7 +6,7 @@ import { ModalImg } from "./modalIMG";
 import { motion } from "framer-motion";
 
 export const Projects = ({ traducciones }) => {
-  const [selectedPreview,setSelectedPreview] = useState(null);
+  const [selectedPreview, setSelectedPreview] = useState(null);
   const { language } = useLanguage();
   return (
     <section id="projects" className="py-10 px-5 bg-gray-100 dark:bg-gray-100">
@@ -21,7 +21,7 @@ export const Projects = ({ traducciones }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-5 hover:shadow-xl transition-shadow"
+            className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-5 hover:shadow-xl transition-shadow h-full flex flex-col"
           >
             <img
               src={project.image}
@@ -29,30 +29,40 @@ export const Projects = ({ traducciones }) => {
               className="w-full h-48 object-contain rounded-md mb-4 bg-white cursor-pointer hover:brightness-90 transition duration-200"
               onClick={() => setSelectedPreview(project.imageCode)}
             />
-              <ModalImg image={selectedPreview} onClose={() => setSelectedPreview(null)} />
+            <ModalImg
+              image={selectedPreview}
+              onClose={() => setSelectedPreview(null)}
+              traducciones={traducciones}
+              project={project}
+            />
+
             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+
+            <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
               {project.description}
             </p>
-            <div className="flex gap-2 mt-4">
+
+            <div className="flex gap-2 mb-4 justify-center">
               {project.techs.map((tech, index) => (
                 <span key={index} className="text-xl">
-                  {techIcons[tech]}
+                  {techIcons.iconProject[tech]}
                 </span>
               ))}
             </div>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              {traducciones.lblProject}
-            </a>
+
+            <div className="flex justify-center mt-auto">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >
+                {traducciones.lblProject}
+              </a>
+            </div>
           </motion.div>
         ))}
       </div>
     </section>
   );
 };
-
