@@ -6,24 +6,24 @@ const Hero = ({ traducciones }) => {
         <span className="text-green-600">Carlos Daniel Duarte León</span>
       </h1>
       <h2 className="text-2xl sm:text-3xl font-medium text-center mt-4 text-gray-700 dark:text-green-500">
-        Desarrollador Web Jr | Apasionado por la Automatización
+        {traducciones.title}
       </h2>
       <p className="mt-4 text-center max-w-xl mx-auto text-black dark:text-gray-400">
-        Soy un desarrollador con enfoque en mejorar procesos, crear experiencias web modernas y construir herramientas útiles para empresas y personas.  Me encanta aprender por mi cuenta, automatizar tareas, y enfrentar  nuevos retos.
+        {traducciones.description}
       </p>
       <div className="mt-6 flex justify-center gap-4">
         <a
-          href="/cv.pdf"
+          href={traducciones.link}
           download
-          className="bg-green-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition"
+          className="bg-green-600 text-white px-6 py-3 rounded shadow hover:bg-green-700 transition"
         >
-          Descargar CV
+          {traducciones.btnDownload}
         </a>
         <a
           href="#contacto"
-          className="border border-blue-600 text-blue-600 px-6 py-3 rounded hover:bg-blue-600 hover:text-white transition"
+          className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
         >
-          Contáctame
+          {traducciones.btnContact}
         </a>
       </div>
     </section>
