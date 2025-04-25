@@ -7,11 +7,11 @@ const Navbar = ({traducciones,toggleLanguage,language}) => {
   return (
     <nav className="bg-neutral-900 shadow-md fixed top-0 w-full z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <div class="rounded-full overflow-hidden h-12 w-12">
-          <img src="/./public/img/dream_TradingCard (1).jpg"  alt="Logo Kinio" class="h-full w-full object-cover"/>
+      <div className="flex items-center space-x-3">
+        <div className="rounded-full overflow-hidden h-12 w-12">
+          <img src="/./public/img/logotipo.png"  alt="Logo Kinio" className="h-full w-full object-cover"/>
         </div>
-  <span class="text-2xl font-bold text-green-600">Kinio</span>
+  <span className="text-2xl font-bold text-green-600">Kinio</span>
 </div>
         <button className="md:hidden" onClick={() => setOpen(!open)}>
           ☰
