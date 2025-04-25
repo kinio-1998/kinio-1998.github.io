@@ -2,7 +2,7 @@ const Hero = ({ traducciones }) => {
   return (
     <section
       className="relative h-[100vh] bg-no-repeat bg-cover bg-center"
-      style={{ backgroundImage: "url('../img/background.webp')" }}
+      style={{ backgroundImage: "url('../img/background.png')" }}
       id="home"
     >
       {/* Capa central que cubre toda la sección */}
