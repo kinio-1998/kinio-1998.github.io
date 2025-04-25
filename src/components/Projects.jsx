@@ -26,7 +26,7 @@ export const Projects = ({ traducciones }) => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-contain rounded-md mb-4 bg-white cursor-pointer hover:brightness-90 transition duration-200"
+              className="w-full h-48 object-contain rounded-md mb-4  bg-black cursor-pointer hover:brightness-90 transition duration-200"
               onClick={() => setSelectedPreview(project.image)}
             />
             <ModalImg
@@ -36,7 +36,7 @@ export const Projects = ({ traducciones }) => {
               project={project}
             />
 
-            <h3 className="text-xl font-semibold mb-2 text-center">{project.title}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-center text-white">{project.title}</h3>
 
             <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
               {project.description}

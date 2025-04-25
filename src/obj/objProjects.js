@@ -28,10 +28,9 @@ export const objProjects = {
             id: 4,
             title: "Portafolio",
             description: "Este script automatiza el control de stock en una hoja de cálculo de Google Sheets. Realiza validaciones, identifica discrepancias entre el inventario web y el físico (tienda), marca productos en cero y aplica formato condicional para una visualización clara.",
-            image: "/./img/inventario_categorias.png",            
-            imageCode: "/./img/inventario_categorias_code.png", 
+            image: "/./img/portafolio.png",            
             link: "https://github.com/kinio-1998/kinio-1998.github.io",
-            techs: ['Apps Script','Google Sheets', 'JavaScript'],
+            techs: ['React','JavaScript','Tailwind','HTML', 'CSS','Vite'],
         },
     ],
     en: [
