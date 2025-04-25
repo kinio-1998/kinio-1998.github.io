@@ -1,11 +1,11 @@
 export const Contact = ({traduccion}) => {
   return(
-        <section id="contact" className="py-16 bg-gray-50 dark:bg-neutral-900">
+        <section id="contact" className="py-16 bg-gray-50 dark:bg-neutral-950">
             <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+            <h2 className="text-3xl font-bold  text-green-600 mb-4">
                 Contáctame
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-green-600 mb-8">
                 ¿Tienes una idea o un proyecto? ¡Hablemos! Estoy disponible para
                 colaboraciones o nuevas oportunidades laborales.
             </p>
@@ -20,31 +20,31 @@ export const Contact = ({traduccion}) => {
                 name="nombre"
                 placeholder="Tu nombre"
                 required
-                className="p-3 rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                className="p-3 rounded-md border border-green-600 dark:bg-green-950/90 dark:text-white"
                 />
                 <input
                 type="email"
                 name="email"
                 placeholder="Tu correo"
                 required
-                className="p-3 rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                className="p-3 rounded-md border border-green-600 dark:bg-green-950/90 dark:text-white"
                 />
                 <textarea
                 name="mensaje"
                 rows="5"
                 placeholder="Tu mensaje"
                 required
-                className="p-3 rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                className="p-3 rounded-md border border-green-600 dark:bg-green-950/90 dark:text-white"
                 ></textarea>
                 <button
                 type="submit"
-                className="bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-all"
+                className="bg-green-600 text-white px-6 py-3 rounded shadow hover:bg-green-700 transition"
                 >
                 Enviar mensaje
                 </button>
             </form>
 
-            <div className="mt-10 space-y-2 text-sm text-gray-500 dark:text-gray-400">
+            <div className="mt-10 space-y-2 text-sm text-green-600">
                 <p>
                 Email:{" "}
                 <a href="mailto:tucorreo@gmail.com" className="">

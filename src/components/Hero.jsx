@@ -5,15 +5,13 @@ const Hero = ({ traducciones }) => {
       style={{ backgroundImage: "url('../img/background.png')" }}
       id="home"
     >
-      {/* Capa central que cubre toda la sección */}
       <div className="absolute inset-0 flex justify-center items-center">
-        {/* Contenedor del contenido con 4/6 de ancho */}
         <div className="w-4/6 bg-white/90 dark:bg-gray-900/90 text-white p-10 rounded-lg text-center">
           <h1 className="text-4xl sm:text-5xl font-bold">
             ¡Hola! Soy{" "}
             <span className="text-green-600">Carlos Daniel Duarte León</span>
           </h1>
-          <h2 className="text-2xl sm:text-3xl font-medium mt-4 text-gray-700 dark:text-green-500">
+          <h2 className="text-2xl sm:text-3xl font-medium mt-4 text-gray-700 dark:text-green-600">
             {traducciones.title}
           </h2>
           <p className="mt-4 max-w-xl mx-auto text-black dark:text-gray-200">

@@ -9,8 +9,8 @@ export const Projects = ({ traducciones }) => {
   const [selectedPreview, setSelectedPreview] = useState(null);
   const { language } = useLanguage();
   return (
-    <section id="projects" className="py-10 px-5 bg-gray-100 dark:bg-gray-100">
-      <h2 className="text-3xl font-bold mb-6 text-center">
+    <section id="projects" className="py-10 px-5  dark:bg-black">
+      <h2 className="text-3xl font-bold mb-6 text-center text-green-600">
         {traducciones.title}
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -21,7 +21,7 @@ export const Projects = ({ traducciones }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-5 hover:shadow-xl transition-shadow h-full flex flex-col"
+            className="bg-white dark:bg-green-950/90 shadow-md rounded-lg p-5 hover:shadow-xl transition-shadow h-full flex flex-col"
           >
             <img
               src={project.image}
@@ -55,7 +55,7 @@ export const Projects = ({ traducciones }) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
               >
                 {traducciones.lblProject}
               </a>

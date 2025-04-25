@@ -5,7 +5,7 @@ const Navbar = ({traducciones,toggleLanguage,language}) => {
 
 
   return (
-    <nav className="bg-neutral-900 shadow-md fixed top-0 w-full z-50">
+    <nav className="bg-black shadow-md fixed top-0 w-full z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
       <div className="flex items-center space-x-3">
         <div className="rounded-full overflow-hidden h-12 w-12">
