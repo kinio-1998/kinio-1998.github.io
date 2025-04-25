@@ -11,6 +11,7 @@ import { objTraducciones } from "./obj/objTraducciones";
 function App() {
   const {language, toggleLanguage} = useLanguage();
   return (
+   // <div className="min-h-screen bg-[url('/public/img/background.avif)] bg-cover bg-center bg-no-repeat bg-fixed">
     <>
       <Navbar traducciones={objTraducciones.nav[language]} toggleLanguage={toggleLanguage} language={language}/>
       <Hero traducciones={objTraducciones.hero[language]}/>
@@ -19,6 +20,7 @@ function App() {
       <Projects traducciones={objTraducciones.projects[language]}/>
       <Contact traducciones={objTraducciones.contact[language]}/>
     </>
+  //  </div>
   );
 }
 
