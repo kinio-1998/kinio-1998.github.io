@@ -4,7 +4,7 @@ import { techIcons } from '../obj/objIcons'
 export const Skills = ({traducciones}) => {
   return (
     <section className="py-24 px-4 bg-gray-100 dark:bg-neutral-950" id="skills">
-      <h2 className="text-3xl font-bold text-white text-center mb-10">{traducciones.title}</h2>
+      <h2 className="text-3xl font-bold text-green-600 text-center mb-10">{traducciones.title}</h2>
       <div className='max-h-96 overflow-y-auto'>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center">
         {techIcons.list.map((skill) => (

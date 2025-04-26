@@ -10,9 +10,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "commit": "node commit.cjs",
-    "actualizar":"git pull origin main"
+    "actualizar": "git pull origin main"
   },
   "dependencies": {
+    "firebase": "^11.6.1",
     "framer-motion": "^12.7.4",
     "kinio-portafolio": "file:",
     "react": "^18.2.0",

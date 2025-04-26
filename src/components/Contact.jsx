@@ -1,3 +1,5 @@
+import { Counter } from "./Counter";
+
 export const Contact = ({traduccion}) => {
   return(
         <section id="contact" className="py-16 bg-gray-50 dark:bg-neutral-950">
@@ -60,6 +62,7 @@ export const Contact = ({traduccion}) => {
                 <p>Ubicación: Culiacán, Sinaloa, México (Disponible a cambio de residencia)</p>
             </div>
             </div>
+            <Counter />
         </section>
   )
 };
