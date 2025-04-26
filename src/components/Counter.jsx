@@ -12,9 +12,9 @@ export const Counter = () => {
 
       if (docSnap.exists()) {
         await updateDoc(docRef, {
-          cantidad: increment(1),
+          cantidad: 0//increment(1),
         });
-        setVisits(docSnap.data().cantidad + 1);
+        setVisits(docSnap.data().cantidad);
       } else {
         await setDoc(docRef, { cantidad: 1 });
         setVisits(1);

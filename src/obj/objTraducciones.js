@@ -44,7 +44,11 @@ export const objTraducciones = {
     en: { title: "Skills" },
   },
   contact:{
-    es:{title:""},
-    en:{title:""}
-  }
+    es:{title:"Contáctame"},
+    en:{title:"Contact"}
+  },
+  index:{
+    es:{title:"Kinio Portafolio"},
+    en:{title:"Kinio PortFolio"}
+  },
 };

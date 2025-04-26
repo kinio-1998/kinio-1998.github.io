@@ -1,4 +1,6 @@
+import { techIcons } from "../obj/objIcons";
 import { Counter } from "./Counter";
+
 
 export const Contact = ({traduccion}) => {
   return(
@@ -49,7 +51,7 @@ export const Contact = ({traduccion}) => {
             <div className="mt-10 space-y-2 text-sm text-green-600">
                 <p>
                 Email:{" "}
-                <a href="mailto:tucorreo@gmail.com" className="">
+                <a href="mailto:li.carlosduarte98@gmail.com" className="">
                     li.carlosduarte98@gmail.com
                 </a>
                 </p>
@@ -61,6 +63,10 @@ export const Contact = ({traduccion}) => {
                 </p>
                 <p>Ubicación: Culiacán, Sinaloa, México (Disponible a cambio de residencia)</p>
             </div>
+            </div>
+            <div className="flex justify-center text-4xl pt-3"> 
+            <a href="https://github.com/kinio-1998" target="_blank">{techIcons.getIconByName('GitHub')}</a>
+            <a href="www.linkedin.com/in/licarlosduarte" target="_blank">{techIcons.getIconByName('LinkedIn')}</a>
             </div>
             <Counter />
         </section>
