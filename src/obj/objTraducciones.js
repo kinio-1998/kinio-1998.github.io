@@ -41,6 +41,7 @@ export const objTraducciones = {
       description:
         "Soy Carlos Daniel Duarte León, Licenciado en Informática con experiencia como desarrollador web y analista técnico. Apasionado por la tecnología, la automatización de procesos y la creación de soluciones útiles para las personas.",
       text: "Me destaco por mi compromiso, la mejora continua, el trabajo en equipo y la resolución de problemas. Disfruto aprender constantemente y participar en proyectos donde pueda combinar creatividad y lógica para obtener resultados que impacten de manera positiva.",
+      lblSkills: "Habilidades Blandas",
       skills: [
         "Pensamiento analítico",
         "Aprendizaje rápido ",
@@ -57,7 +58,22 @@ export const objTraducciones = {
       btnAcademy:"Formación Académica",
       btnLaboral:"Experiencia Laboral"
     },
-    en: { title: "About Me", description: "I´m a web developer", text: "" },
+    en: { title: "About Me", description: "I´m a web developer", text: "",skills: [
+      "Pensamiento analítico",
+      "Aprendizaje rápido ",
+      "Gestión de datos",
+      "Trabajo en equipo",
+      "Liderazgo",
+      "Organización y planificación",
+      "Adaptabilidad ",
+      "Resiliencia",
+      "Pensamiento crítico",
+      "Resolución de problemas complejos",
+      "Evaluación de riesgos",    
+    ],
+    lblSkills: "Soft Skills",
+    btnAcademy:"Formación Académica",
+    btnLaboral:"Experiencia Laboral" },
   },
   projects: {
     es: { title: "Proyectos", lblProject: "Ver Código" },

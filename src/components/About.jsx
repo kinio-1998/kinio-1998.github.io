@@ -30,7 +30,7 @@ const About = ({ traducciones }) => {
       {/* Soft Skills abajo */}
       <div className="mt-10 w-full flex flex-col items-center">
         <h3 className="text-2xl font-semibold text-green-600 mb-4 text-center">
-          Soft Skills
+          {traducciones.lblSkills}
         </h3>
         <ul className="list-disc list-outside text-gray-300 grid grid-cols-1 sm:grid-cols-4 gap-2 gap-x-10">
           {traducciones.skills.map((skill) => (
@@ -44,7 +44,7 @@ const About = ({ traducciones }) => {
         >
           {traducciones.btnAcademy}
         </a>
-        <a 
+        <a onClick={() => setSelectedPreview(null)}
           className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
         >
           {traducciones.btnLaboral}
