@@ -34,6 +34,8 @@ export const Projects = ({ traducciones }) => {
               onClose={() => setSelectedPreview(null)}
               traducciones={traducciones}
               project={project}
+              component="img"
+              title = {project.title}
             />
 
             <h3 className="text-xl font-semibold mb-2 text-center text-white">{project.title}</h3>
