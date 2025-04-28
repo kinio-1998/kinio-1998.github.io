@@ -66,7 +66,7 @@ export const Contact = ({traduccion}) => {
             </div>
             <div className="flex justify-center text-4xl pt-3"> 
             <a href="https://github.com/kinio-1998" target="_blank">{techIcons.getIconByName('GitHub')}</a>
-            <a href="www.linkedin.com/in/licarlosduarte" target="_blank">{techIcons.getIconByName('LinkedIn')}</a>
+            <a href="https://linkedin.com/in/licarlosduarte" target="_blank">{techIcons.getIconByName('LinkedIn')}</a>
             </div>
             <Counter />
         </section>
