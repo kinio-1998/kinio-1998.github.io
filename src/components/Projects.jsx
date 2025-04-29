@@ -27,17 +27,8 @@ export const Projects = ({ traducciones }) => {
               src={project.image}
               alt={project.title}
               className="w-full h-48 object-contain rounded-md mb-4  bg-black cursor-pointer hover:brightness-90 transition duration-200"
-              onClick={() => setSelectedPreview(project.image)}
+              onClick={() => setSelectedPreview({type:"img",data:project})}
             />
-            <ModalImg
-              image={selectedPreview}
-              onClose={() => setSelectedPreview(null)}
-              traducciones={traducciones}
-              project={project}
-              component="img"
-              title = {project.title}
-            />
-
             <h3 className="text-xl font-semibold mb-2 text-center text-white">{project.title}</h3>
 
             <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
@@ -64,6 +55,12 @@ export const Projects = ({ traducciones }) => {
             </div>
           </motion.div>
         ))}
+         {selectedPreview && (<ModalImg
+              project={selectedPreview.data}
+              onClose={() => setSelectedPreview(null)}
+              traducciones={traducciones}
+              component={selectedPreview.type}
+            />)}
       </div>
     </section>
   );
