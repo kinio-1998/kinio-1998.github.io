@@ -1,10 +1,13 @@
+import { useState } from "react";
+import { ModalImg } from "./modalIMG";
+
 const About = ({ traducciones }) => {
+  const [selectedPreview, setSelectedPreview] = useState(null);
   return (
     <section
       id="about"
       className="min-h-screen flex flex-col items-center justify-center px-6 py-16 gap-10 bg-black text-white"
     >
-      {/* Título arriba */}
       <h2 className="text-3xl sm:text-4xl font-bold text-green-600 mb-8 text-center">
         {traducciones.title}
       </h2>
@@ -39,17 +42,27 @@ const About = ({ traducciones }) => {
         </ul>
       </div>
       <div className="flex justify-between gap-10">
-        <a 
+        <a
+          onClick={() => setSelectedPreview({ type: "academy", data: traducciones })}
           className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
         >
           {traducciones.btnAcademy}
         </a>
-        <a onClick={() => setSelectedPreview(null)}
+        <a
+          onClick={() => setSelectedPreview({ type: "work", data: traducciones })}
           className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
         >
           {traducciones.btnLaboral}
         </a>
       </div>
+      {selectedPreview && (
+        <ModalImg
+          project={selectedPreview.data}
+          onClose={() => setSelectedPreview(null)}
+          traducciones={traducciones}
+          component={selectedPreview.type}
+        />
+      )}
     </section>
   );
 };
