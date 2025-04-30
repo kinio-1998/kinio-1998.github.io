@@ -32,12 +32,15 @@ export const ModalImg = ({ project, onClose, traducciones, component }) => {
       </div>
     ),
     academy: (
-      <div className="bg-white dark:bg-black p-4 rounded-md w-full max-w-3xl relative border border-green-600 max-h-[90vh]">
-      <button className="absolute top-2 right-4 text-2xl font-bold text-green-600">
-        &times;
-      </button>
+      <div className="bg-white dark:bg-black p-4 rounded-md w-full max-w-3xl relative border border-green-600 max-h-[90vh] overflow-y-auto">
+      <button
+          onClick={onClose}
+          className="absolute top-2 right-4 text-2xl font-bold text-green-600"
+        >
+          &times;
+        </button>
     
-      <h2 className="text-green-500 text-2xl font-semibold text-center mb-6 border-b-4 border-green-600 uppercase">
+      <h2 className="text-green-500 text-2xl font-semibold text-center mb-6 border-b-4 border-green-600">
         {traducciones.btnAcademy}
       </h2>
     
