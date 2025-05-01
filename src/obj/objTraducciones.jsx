@@ -60,25 +60,15 @@ export const objTraducciones = {
       btnAcademy: "Formación Académica",
       btnLaboral: "Experiencia Laboral",
       academyInfo: (
-        <div className="mb-8">
-          <h3 className="text-green-500 text-xl font-semibold border-b border-green-500 pb-1 mb-4">
-            🎓 Educación
-          </h3>
-          <div>
-            <h4 className="text-lg font-bold flex justify-between">
-              Universidad Autónoma de Sinaloa
-            </h4>
-            <span className="text-sm font-normal text-gray-400">2016 - 2021</span>
-            <p>Licenciatura en Informática</p>
-            <p>
-              <span className="font-semibold">Promedio:</span> 8.3/10
-            </p>
-            <p>
-              <span className="font-semibold">Proyecto destacado:</span> Desarrollo
-              de sistema de pagos similar a PayPal en PHP y MySQL.
-            </p>
-          </div>
-        </div>
+        <div>
+    <h3 className="text-xl font-semibold text-green-400 mb-2">🎓 Educación</h3>
+    <div className="bg-green-950/80 p-4 rounded-lg border-l-4 border-green-500">
+      <h4 className="font-bold">Universidad Autónoma de Sinaloa</h4>
+      <p className="text-sm text-gray-300">2016 - 2021 · Licenciatura en Informática</p>
+      <p className="text-sm mt-1 text-gray-200"><strong>Promedio:</strong> 8.3/10</p>
+      <p className="text-sm text-gray-200"><strong>Proyecto destacado:</strong> Sistema de pagos similar a PayPal en PHP y MySQL.</p>
+    </div>
+  </div>
       ),
       languageInfo: (
         <div>
@@ -93,40 +83,51 @@ export const objTraducciones = {
       ),
       certificationInfo: (
         <div className="mb-8">
-          <h3 className="text-green-500 text-xl font-semibold border-b border-green-500 pb-1 mb-4">
-            📜 Certificaciones
-          </h3>
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              <span className="font-semibold">EF SET English Certificate</span>{" "}
-              <br />
-              <span className="text-sm font-normal text-gray-400 pl-6">
-                Jun 2024
-              </span>{" "}
-              <br />
-              <span className="pl-6">(59/100 - B2 Upper Intermediate) </span>
-            </li>
-            <li>
-              <span className="font-semibold">IBM</span> <br />
-              <span className="text-sm font-normal text-gray-400 pl-6">
-                Jun 2024
-              </span>
-              <br /> <span className="pl-6">Python for Data Science </span>
-            </li>
-            <li>
-              <span className="font-semibold">Universidad Autónoma de Sinaloa</span>{" "}
-              <br />
-              <span className="text-sm font-normal text-gray-400 pl-6">
-                Jun 2021
-              </span>
-              <br />
-              <span className="pl-6">
-                Diplomado en Desarrollo web con Infraestructura de servicios y
-                multiservicios en la nube.
-              </span>
-            </li>
-          </ul>
-        </div>
+          <div>
+    <h3 className="text-xl font-semibold text-green-400 mb-2">📜 Certificaciones</h3>
+    <ul className="space-y-3 text-sm text-gray-200">
+      <li className="border-l-4 border-green-500 pl-2">
+        <strong>EF SET English Certificate</strong><br />
+        Jun 2024 · (59/100 - B2 Upper Intermediate)
+      </li>
+      <li className="border-l-4 border-green-500 pl-2">
+        <strong>IBM</strong><br />
+        Jun 2024 · Python for Data Science
+      </li>
+      <li className="border-l-4 border-green-500 pl-2">
+        <strong>Universidad Autónoma de Sinaloa</strong><br />
+        Jun 2021 · Diplomado en desarrollo web con infraestructura en la nube
+      </li>
+    </ul>
+  </div>
+  </div>
+      ),
+      aforeInfo: (
+        <div className="border-l-4 border-green-500 bg-green-950/50 p-4 rounded-lg ">
+      <h3 className="text-xl font-semibold text-green-300">Afore Coppel</h3>
+      <p className="font-bold text-white mt-2">Pogramador/Analista de incidencias</p>
+      <ul className="list-disc list-inside mt-3 text-sm text-gray-200 space-y-1">
+        <li>Automatización de reportes en Google Sheets para la gestión equitativa de incidencias.</li>
+        <li>Análisis de flujos de información en Python, JS, HTML, PHP, Java, C#, C++.</li>
+        <li>Manejo de bases de datos en PostgreSQL e Informix.</li>
+        <li>Resolución de incidencias críticas bajo presión y toma de decisiones inmediatas.</li>
+        <li>Herramientas: VNC Viewer, Linux, Git, WinSCP, OpenShift.</li>
+        <li>Supervisión de equipo como líder suplente.</li>
+      </ul>
+    </div>       
+      ),
+      emyeInfo: (
+        <div className="border-l-4 border-green-500 bg-green-950/50 p-4 rounded-lg ">
+      <h3 className="text-xl font-semibold text-green-300">Equipos Musicales y Electrónica</h3>
+      <p className="font-bold text-white mt-2">Administrador Web / Marketing / Atención al cliente digital</p>
+      <ul className="list-disc list-inside mt-3 text-sm text-gray-200 space-y-1">
+        <li>Automatización de archivos para control de inventario.</li>
+        <li>Desarrollo de un bot de WhatsApp con WhatsApp-js.</li>
+        <li>Marketing digital en redes sociales.</li>
+        <li>Uso de Microsip ERP para ventas y facturación sin capacitación previa.</li>
+        <li>Atención al cliente por redes sociales.</li>
+      </ul>
+    </div> 
       ),
     },
     en: {

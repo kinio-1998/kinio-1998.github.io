@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ModalImg } from "./modalIMG";
+import { ModalImg } from "./ModalIMG";
 
 const About = ({ traducciones }) => {
   const [selectedPreview, setSelectedPreview] = useState(null);
@@ -29,8 +29,7 @@ const About = ({ traducciones }) => {
           </p>
         </div>
       </div>
-
-      {/* Soft Skills abajo */}
+ 
       <div className="mt-10 w-full flex flex-col items-center">
         <h3 className="text-2xl font-semibold text-green-600 mb-4 text-center">
           {traducciones.lblSkills}

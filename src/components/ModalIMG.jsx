@@ -33,48 +33,51 @@ export const ModalImg = ({ project, onClose, traducciones, component }) => {
     ),
     academy: (
       <div className="bg-white dark:bg-black p-4 rounded-md w-full max-w-3xl relative border border-green-600 max-h-[90vh] overflow-y-auto">
-      <button
+        <button
           onClick={onClose}
           className="absolute top-2 right-4 text-2xl font-bold text-green-600"
         >
           &times;
         </button>
-    
-      <h2 className="text-green-500 text-2xl font-semibold text-center mb-6 border-b-4 border-green-600">
-        {traducciones.btnAcademy}
-      </h2>
-    
-      <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
-        <div className="sm:col-span-5 sm:col-start-2 sm:row-start-2 ">
-          {traducciones.academyInfo}
-        </div>
-        <div className="sm:col-span-5 sm:col-start-2 sm:row-start-4 ">
-          {traducciones.languageInfo}
-        </div>
-        <div className="sm:col-span-5 sm:col-start-7 sm:row-start-2 ">
-          {traducciones.certificationInfo}
+
+        <h2 className="text-green-500 text-2xl font-semibold text-center mb-6 border-b-4 border-green-600">
+          {traducciones.btnAcademy}
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
+          <div className="sm:col-span-5 sm:col-start-2 sm:row-start-2 ">
+            {traducciones.academyInfo}
+          </div>
+          <div className="sm:col-span-5 sm:col-start-2 sm:row-start-4 ">
+            {traducciones.languageInfo}
+          </div>
+          <div className="sm:col-span-5 sm:col-start-7 sm:row-start-2 ">
+            {traducciones.certificationInfo}
+          </div>
         </div>
       </div>
-    </div>
-    
     ),
     work: (
-      <div className="bg-white dark:bg-black p-4 rounded-md max-w-6xl w-full relative border-green-600 border">
-        <div className="grid grid-cols-12 grid-rows-6 gap-12 ">
-          <button
-            onClick={onClose}
-            className="absolute top-2 right-4 text-2xl font-bold text-green-600"
-          >
-            &times;
-          </button>
-          <div className="flex justify-center col-span-10 col-start-2 border">
-            <h1>{traducciones.btnAcademy}</h1>
-          </div>
-          <div className="col-span-5 row-span-4 col-start-2 row-start-2 border">
-            2
-          </div>
-          <div className="col-span-5 row-span-4 col-start-7 row-start-2 border">
-            3
+      <div className="bg-white dark:bg-black p-4 rounded-md w-full max-w-3xl relative border border-green-600 max-h-[90vh] overflow-y-auto">
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-4 text-2xl font-bold text-green-600"
+        >
+          &times;
+        </button>
+
+        <div className="bg-black/80 p-6 rounded-xl shadow-xl max-w-5xl mx-auto text-white">
+          <h2 className="text-3xl font-bold text-center text-green-400 mb-8 border-b-4 border-green-400 pb-2">
+            {traducciones.btnLaboral}
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
+            <div className="sm:col-span-5 sm:col-start-2 sm:row-start-2 row-span-4 ">
+              {traducciones.aforeInfo}
+            </div>
+            <div className="sm:col-span-5 sm:col-start-7 sm:row-start-2 ">
+              {traducciones.emyeInfo}
+            </div>
           </div>
         </div>
       </div>
@@ -105,7 +108,9 @@ export const ModalImg = ({ project, onClose, traducciones, component }) => {
         }
       }}
     >
+      <div className="flex gap-4 items-stretch">
       {modal[component]}
+      </div>
     </div>
   );
 };
