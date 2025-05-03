@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLanguage } from "../context/LanguajeContent";
 import { techIcons } from "../obj/objIcons";
 import { objProjects } from "../obj/objProjects";
-import { ModalImg } from "./modalIMG";
+import { ModalImg } from "./ModalIMG";
 import { motion } from "framer-motion";
 
 export const Projects = ({ traducciones }) => {
@@ -27,9 +27,11 @@ export const Projects = ({ traducciones }) => {
               src={project.image}
               alt={project.title}
               className="w-full h-48 object-contain rounded-md mb-4  bg-black cursor-pointer hover:brightness-90 transition duration-200"
-              onClick={() => setSelectedPreview({type:"img",data:project})}
+              onClick={() => setSelectedPreview({ type: "img", data: project })}
             />
-            <h3 className="text-xl font-semibold mb-2 text-center text-white">{project.title}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-center text-white">
+              {project.title}
+            </h3>
 
             <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
               {project.description}
@@ -37,7 +39,7 @@ export const Projects = ({ traducciones }) => {
 
             <div className="flex gap-2 mb-4 justify-center">
               {project.techs.map((tech, index) => (
-                <span key={index} className="text-xl">
+                <span key={index} className="text-xl" title={tech}>
                   {techIcons.getIconByName(tech)}
                 </span>
               ))}
@@ -55,12 +57,14 @@ export const Projects = ({ traducciones }) => {
             </div>
           </motion.div>
         ))}
-         {selectedPreview && (<ModalImg
-              project={selectedPreview.data}
-              onClose={() => setSelectedPreview(null)}
-              traducciones={traducciones}
-              component={selectedPreview.type}
-            />)}
+        {selectedPreview && (
+          <ModalImg
+            project={selectedPreview.data}
+            onClose={() => setSelectedPreview(null)}
+            traducciones={traducciones}
+            component={selectedPreview.type}
+          />
+        )}
       </div>
     </section>
   );
