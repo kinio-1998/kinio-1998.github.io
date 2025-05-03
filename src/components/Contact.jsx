@@ -49,7 +49,7 @@ export const Contact = ({ traducciones }) => {
             name="nombre"
             placeholder={traducciones.lblNamePlaceHolder}
             required
-            className="p-3 rounded-md border border-green-600 dark:bg-green-950/90 dark:text-white"
+            className="p-3 rounded-md border border-green-600 dark:bg-green-950/90 dark:text-white  placeholder:italic placeholder:text-green-700  focus:border-2 focus:border-green-400 focus:outline-none"
           />
 
           <label htmlFor="email" className="sr-only">{traducciones.lblEmail}</label>
@@ -59,7 +59,7 @@ export const Contact = ({ traducciones }) => {
             name="email"
             placeholder={traducciones.lblEmailPlaceHolder}
             required
-            className="p-3 rounded-md border border-green-600 dark:bg-green-950/90 dark:text-white"
+            className="p-3 rounded-md border border-green-600 dark:bg-green-950/90 dark:text-white  placeholder:italic placeholder:text-green-700  focus:border-2 focus:border-green-400 focus:outline-none"
           />
 
           <label htmlFor="mensaje" className="sr-only">{traducciones.lblMessage}</label>
@@ -69,7 +69,7 @@ export const Contact = ({ traducciones }) => {
             rows="5"
             placeholder={traducciones.lblMessagePlaceHolder}
             required
-            className="p-3 rounded-md border border-green-600 dark:bg-green-950/90 dark:text-white"
+            className="p-3 rounded-md border border-green-600 dark:bg-green-950/90 dark:text-white placeholder:italic placeholder:text-green-700  focus:border-2 focus:border-green-400 focus:outline-none"
           ></textarea>
 
           <button
