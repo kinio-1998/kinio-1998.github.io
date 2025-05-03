@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt,FaNodeJs,FaWhatsapp, FaPython,FaGithub,FaLinkedin } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt,FaNodeJs,FaWhatsapp, FaPython,FaGithub,FaLinkedin, FaGoogle } from "react-icons/fa";
 import { SiTailwindcss, SiVite, SiGooglesheets, SiGoogleappsscript, SiPostgresql,SiMysql  } from "react-icons/si";
 export const techIcons = {
   list: [
@@ -96,6 +96,12 @@ export const techIcons = {
       id: 16,
       name: "LinkedIn",
       icon: <FaLinkedin  className="text-linkedin" />,
+      show:false
+    },
+    {
+      id: 17,
+      name: "Gmail",
+      icon: <FaGoogle  className="text-red-600" />,
       show:false
     },
   ],
