@@ -26,7 +26,7 @@ const Hero = ({ traducciones }) => {
               {traducciones.btnDownload}
             </a>
             <a
-              href="#contacto"
+              href="#contact"
               className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
             >
               {traducciones.btnContact}

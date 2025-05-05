@@ -35,8 +35,8 @@ const About = ({ traducciones }) => {
           {traducciones.lblSkills}
         </h3>
         <ul className="list-disc list-outside text-gray-300 grid grid-cols-1 sm:grid-cols-4 gap-2 gap-x-10">
-          {traducciones.skills.map((skill) => (
-            <li>{skill}</li>
+          {traducciones.skills.map((skill,i) => (
+            <li key={i}>{skill}</li>
           ))}
         </ul>
       </div>
@@ -52,7 +52,7 @@ const About = ({ traducciones }) => {
           className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
         >
           {traducciones.btnLaboral}
-        </a>
+        </a>        
       </div>
       {selectedPreview && (
         <ModalImg

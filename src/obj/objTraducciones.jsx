@@ -1,3 +1,6 @@
+import { certifications } from "./objCertifications";
+import { techIcons } from "./objIcons";
+
 export const objTraducciones = {
   nav: {
     es: {
@@ -21,7 +24,7 @@ export const objTraducciones = {
       title: "Desarrollador Web Jr | Apasionado por la Automatización",
       description:
         "Licenciado en informática con 3 años de experiencia en áreas de sistemas y análisis de datos. \n Durante este tiempo, trabajé con flujos de datos de múltiples lenguajes y bases de datos relacionales, lo que me dio una base sólida en lógica de programación y estructuras de datos. \n Actualmente, me estoy enfocando en el desarrollo web, creando proyectos por mi cuenta y fortaleciendo mis habilidades con tecnologías como HTML, CSS, JavaScript, React y MySQL. Mi objetivo es crecer profesionalmente como desarrollador front-end, aportar soluciones prácticas y seguir aprendiendo constantemente.",
-      link: "../../public/cv/cv-es.pdf",
+      link: "../../public/cv/Cv_Li.Duarte.pdf",
       btnDownload: "Descargar CV",
       btnContact: "Contáctame",
     },
@@ -30,7 +33,7 @@ export const objTraducciones = {
       title: "Junior Web Developer | Passionate about Automation",
       description:
         "I'm a developer focused on improving processes, creating modern web experiences, and building useful tools for businesses and people. I love self-learning, automating tasks, and taking on new challenges.",
-      link: "../../public/cv/cv-en.pdf",
+      link: "../../public/cv/Cv_Li.Duarte_en.pdf",
       btnDownload: "Download Resume",
       btnContact: "Get in touch with me",
     },
@@ -54,6 +57,7 @@ export const objTraducciones = {
         "Pensamiento crítico",
         "Resolución de problemas complejos",
         "Evaluación de riesgos",
+        "Trabajo bajo presión",
       ],
       btnAcademy: "Formación Académica",
       btnLaboral: "Experiencia Laboral",
@@ -95,22 +99,35 @@ export const objTraducciones = {
               📜 Certificaciones
             </h3>
             <ul className="space-y-3 text-sm text-gray-200">
-              <li className="border-l-4 border-green-500 pl-2">
-                <strong>EF SET English Certificate</strong>
-                <br />
-                Jun 2024 · (59/100 - B2 Upper Intermediate)
-              </li>
-              <li className="border-l-4 border-green-500 pl-2">
-                <strong>IBM</strong>
-                <br />
-                Jun 2024 · Python for Data Science
-              </li>
-              <li className="border-l-4 border-green-500 pl-2">
-                <strong>Universidad Autónoma de Sinaloa</strong>
-                <br />
-                Jun 2021 · Diplomado en desarrollo web con infraestructura en la
-                nube
-              </li>
+              {certifications.es.map((cert) => (
+                <li
+                  key={cert.id}
+                  className="border-l-4 border-green-500 pl-2 rounded-lg"
+                >
+                  <div className="grid grid-cols-5 gap-4">
+                    <div className="col-span-4">
+                      <h4 className="text-green-600 font-semibold">
+                        {cert.institution}
+                      </h4>
+                      <p className="text-white text-sm">{cert.title}</p>
+                      <p className="text-gray-400 text-xs">{cert.date}</p>
+                    </div>
+                    <div className="col-span-1 flex items-center justify-end">
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-green-600 hover:text-green-300"
+                        title="Ver certificado"
+                      >
+                        <i className="text-xl flex ">
+                          {techIcons.getIconByName("File")}
+                        </i>                      
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -194,7 +211,8 @@ export const objTraducciones = {
   contact: {
     es: {
       title: "Contáctame",
-      lblContact:"¿Tienes una idea o un proyecto? ¡Hablemos! Estoy disponible para colaboraciones o nuevas oportunidades laborales.",
+      lblContact:
+        "¿Tienes una idea o un proyecto? ¡Hablemos! Estoy disponible para colaboraciones o nuevas oportunidades laborales.",
       lblName: "Nombre",
       lblNamePlaceHolder: "Escribe tu nombre",
       lblEmail: "Correo electrónico",
