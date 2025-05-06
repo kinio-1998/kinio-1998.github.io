@@ -5,14 +5,14 @@ export const certifications ={
             institution:"EF SET English Certificate",
             title:"(59/100 - B2 Upper Intermediate)",
             date:"Jun 2024",
-            link:""
+            link:"https://cert.efset.org/rNt9Dk"
         },
         {
             id:2,
             institution:"IBM",
             title:"Python for Data Science",
             date:"Jun 2024",
-            link:""
+            link:"https://www.credly.com/badges/020f5695-1e7a-4075-aeb6-5449077f6590/linked_in_profile"
         },
         {
             id:3,

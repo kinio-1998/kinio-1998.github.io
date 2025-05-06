@@ -1,4 +1,5 @@
 import { certifications } from "./objCertifications";
+import { experiences } from "./objExperience";
 import { techIcons } from "./objIcons";
 
 export const objTraducciones = {
@@ -66,7 +67,7 @@ export const objTraducciones = {
           <h3 className="text-xl font-semibold text-green-400 mb-2">
             🎓 Educación
           </h3>
-          <div className="bg-green-950/80 p-4 rounded-lg border-l-4 border-green-500">
+          <div className="bg-green-950/30 p-4 rounded-lg border-l-4 border-green-500">
             <h4 className="font-bold">Universidad Autónoma de Sinaloa</h4>
             <p className="text-sm text-gray-300">
               2016 - 2021 · Licenciatura en Informática
@@ -122,7 +123,7 @@ export const objTraducciones = {
                       >
                         <i className="text-xl flex ">
                           {techIcons.getIconByName("File")}
-                        </i>                      
+                        </i>
                       </a>
                     </div>
                   </div>
@@ -132,51 +133,18 @@ export const objTraducciones = {
           </div>
         </div>
       ),
-      aforeInfo: (
-        <div className="border-l-4 border-green-500 bg-green-950/50 p-4 rounded-lg ">
-          <h3 className="text-xl font-semibold text-green-300">Afore Coppel</h3>
-          <p className="font-bold text-white mt-2">
-            Pogramador/Analista de incidencias
-          </p>
-          <ul className="list-disc list-inside mt-3 text-sm text-gray-200 space-y-1">
-            <li>
-              Automatización de reportes en Google Sheets para la gestión
-              equitativa de incidencias.
-            </li>
-            <li>
-              Análisis de flujos de información en Python, JS, HTML, PHP, Java,
-              C#, C++.
-            </li>
-            <li>Manejo de bases de datos en PostgreSQL e Informix.</li>
-            <li>
-              Resolución de incidencias críticas bajo presión y toma de
-              decisiones inmediatas.
-            </li>
-            <li>Herramientas: VNC Viewer, Linux, Git, WinSCP, OpenShift.</li>
-            <li>Supervisión de equipo como líder suplente.</li>
+      workExperience: experiences.es.map((exp) => (
+        <div className="border-l-4 border-green-500 bg-green-950/30 p-4 rounded-lg" key={exp.id}>
+          <h3 className="text-lg font-semibold text-green-300">{exp.company}</h3>
+          <p className="text-sm text-gray-400">{exp.date}</p>
+          <p className="font-bold text-white mt-2">{exp.title}</p>
+          <ul className="list-disc list-inside mt-3 text-xs text-gray-200 space-y-1">
+            {exp.activities.map((act, i) => (
+              <li key={i}>{act}</li>
+            ))}
           </ul>
         </div>
-      ),
-      emyeInfo: (
-        <div className="border-l-4 border-green-500 bg-green-950/50 p-4 rounded-lg ">
-          <h3 className="text-xl font-semibold text-green-300">
-            Equipos Musicales y Electrónica
-          </h3>
-          <p className="font-bold text-white mt-2">
-            Administrador Web / Marketing / Atención al cliente digital
-          </p>
-          <ul className="list-disc list-inside mt-3 text-sm text-gray-200 space-y-1">
-            <li>Automatización de archivos para control de inventario.</li>
-            <li>Desarrollo de un bot de WhatsApp con WhatsApp-js.</li>
-            <li>Marketing digital en redes sociales.</li>
-            <li>
-              Uso de Microsip ERP para ventas y facturación sin capacitación
-              previa.
-            </li>
-            <li>Atención al cliente por redes sociales.</li>
-          </ul>
-        </div>
-      ),
+      )),
     },
     en: {
       title: "About Me",

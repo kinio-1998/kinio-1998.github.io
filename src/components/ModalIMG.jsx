@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-export const ModalImg = ({ project, onClose, traducciones, component }) => {
+export const ModalImg = ({ project, onClose,isModalOpen, traducciones, component }) => {
   const modalRef = useRef();
   const modal = {
     img: (
@@ -45,11 +45,11 @@ export const ModalImg = ({ project, onClose, traducciones, component }) => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
-          <div className="sm:col-span-5 sm:col-start-2 sm:row-start-2 ">
+          <div className="sm:col-span-5 sm:col-start-2 sm:row-start-2 mr-3">
             {traducciones.academyInfo}
-          </div>
-          <div className="sm:col-span-5 sm:col-start-2 sm:row-start-4 ">
-            {traducciones.languageInfo}
+            <div className="sm:col-span-5 sm:col-start-2 sm:row-start-4 mt-10">
+              {traducciones.languageInfo}
+            </div>
           </div>
           <div className="sm:col-span-5 sm:col-start-7 sm:row-start-2 ">
             {traducciones.certificationInfo}
@@ -71,13 +71,8 @@ export const ModalImg = ({ project, onClose, traducciones, component }) => {
             {traducciones.btnLaboral}
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
-            <div className="sm:col-span-5 sm:col-start-2 sm:row-start-2 row-span-4 ">
-              {traducciones.aforeInfo}
-            </div>
-            <div className="sm:col-span-5 sm:col-start-7 sm:row-start-2 ">
-              {traducciones.emyeInfo}
-            </div>
+          <div className="grid grid-cols-1  gap-4">
+           {traducciones.workExperience}
           </div>
         </div>
       </div>
@@ -90,13 +85,20 @@ export const ModalImg = ({ project, onClose, traducciones, component }) => {
         onClose();
       }
     };
-
-    document.addEventListener("keydown", handleEscape);
-
+  
+    if (isModalOpen) {
+      document.body.classList.add("overflow-hidden");
+      document.addEventListener("keydown", handleEscape);
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  
     return () => {
+      document.body.classList.remove("overflow-hidden");
       document.removeEventListener("keydown", handleEscape);
     };
-  }, [onClose]);
+  }, [isModalOpen, onClose]);
+  
 
   if (component === "img" && !project.image) return null;
   return (
@@ -108,9 +110,7 @@ export const ModalImg = ({ project, onClose, traducciones, component }) => {
         }
       }}
     >
-      <div className="flex gap-4 items-stretch">
-      {modal[component]}
-      </div>
+      <div className="flex gap-4 items-stretch">{modal[component]}</div>
     </div>
   );
 };

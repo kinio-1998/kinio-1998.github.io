@@ -61,6 +61,7 @@ export const Projects = ({ traducciones }) => {
           <ModalImg
             project={selectedPreview.data}
             onClose={() => setSelectedPreview(null)}
+            isModalOpen={selectedPreview !== null}
             traducciones={traducciones}
             component={selectedPreview.type}
           />

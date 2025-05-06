@@ -5,6 +5,7 @@ export const ModalInfo = (traducciones) =>{
         <ModalImg
                       image={selectedPreview}
                       onClose={() => setSelectedPreview(null)}
+                      isModalOpen={selectedPreview !== null}
                       traducciones={traducciones}
                       project={project}
                     />
