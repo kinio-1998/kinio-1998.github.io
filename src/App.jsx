@@ -1,39 +1,52 @@
+import { AnimatePresence, motion } from "framer-motion";
 import About from "./components/About";
 import { Contact } from "./components/Contact";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import {Projects} from "./components/Projects";
+import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { useLanguage } from "./context/LanguajeContent";
 import { objTraducciones } from "./obj/objTraducciones";
 import { Toaster } from "react-hot-toast";
 
-
 function App() {
-  const {language, toggleLanguage} = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   return (
-   <div className="min-h-screen bg-[url('/./img/background.avif)] bg-cover bg-center bg-no-repeat bg-fixed scroll-smooth">
-    <>
-    <Toaster
-        position="top-right"
-        reverseOrder={false}
-        toastOptions={{
-          duration: 4000,
-          style: {
-            background: "#1F2937",
-            color: "#fff",
-          },
-        }}/>
-      <Navbar traducciones={objTraducciones.nav[language]} toggleLanguage={toggleLanguage} language={language}/>
-      <Hero traducciones={objTraducciones.hero[language]}/>
-      <About  traducciones={objTraducciones.about[language]}/>
-      <Skills traducciones={objTraducciones.skills[language]}/>
-      <Projects traducciones={objTraducciones.projects[language]}/>
-      <Contact traducciones={objTraducciones.contact[language]}/>
-    </>
-    </div>
+      <>
+        <Toaster
+          position="top-right"
+          reverseOrder={false}
+          toastOptions={{
+            duration: 4000,
+            style: {
+              background: "#1F2937",
+              color: "#fff",
+            },
+          }}
+        />
+        <Navbar
+          traducciones={objTraducciones.nav[language]}
+          toggleLanguage={toggleLanguage}
+          language={language}
+        />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={language}
+            initial={{ opacity: 0, backgroundColor: "rgba(5, 46, 22, 0.3)" }}
+            animate={{ opacity: 1, backgroundColor: "transparent" }}
+            exit={{ opacity: 0, backgroundColor: "rgba(5, 46, 22, 0.3)" }}
+            transition={{ duration: 0.5 }}
+            className="min-h-screen bg-[url('/./img/background.avif')] bg-cover bg-center bg-no-repeat bg-fixed scroll-smooth"
+          >
+            <Hero traducciones={objTraducciones.hero[language]} />
+            <About traducciones={objTraducciones.about[language]} />
+            <Skills traducciones={objTraducciones.skills[language]} />
+            <Projects traducciones={objTraducciones.projects[language]} />
+            <Contact traducciones={objTraducciones.contact[language]} />
+          </motion.div>
+        </AnimatePresence>
+      </>
   );
 }
 
-
-export default App
+export default App;

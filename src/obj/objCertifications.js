@@ -28,7 +28,5 @@ export const certifications ={
             date:"Nov 2024",
             link:"https://tutorial-sql.s3.amazonaws.com/certificates/28608_Carlos%20daniel_Duarte%20le%C3%B3n/28608_02092024.png"
         },
-    ],
-    en:[        
     ]
 }

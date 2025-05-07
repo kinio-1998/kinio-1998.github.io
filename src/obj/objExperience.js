@@ -28,5 +28,33 @@ export const experiences = {
       date:"Oct 2024 - Presente",
     },
   ],
-  en: [],
+  en: [
+    {
+      id: 1,
+      title: "Programmer / Incident Analyst",
+      company: "Afore Coppel",
+      activities: [
+        "Report automation in Google Sheets for fair incident management.",
+        "Information flow analysis using Python, JS, HTML, PHP, Java, C#, C++.",
+        "Database management with PostgreSQL and Informix.",
+        "Resolution of critical incidents under pressure and immediate decision-making.",
+        "Tools: VNC Viewer, Linux, Git, WinSCP, OpenShift.",
+        "Team supervision as a substitute leader.",
+      ],
+      date: "Jun 2021 - Jun 2024",
+    },
+    {
+      id: 2,
+      title: "Web Administrator / Marketing / Digital Customer Service",
+      company: "Equipos Musicales y Electrónica",
+      activities: [
+        "Inventory control file automation.",
+        "WhatsApp bot development using WhatsApp-js.",
+        "Digital marketing on social media.",
+        "Use of Microsip ERP for sales and invoicing without prior training.",
+        "Customer support through social media.",
+      ],
+      date: "Oct 2024 - Present",
+    },
+  ]
 };
