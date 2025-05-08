@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { archiviements } from "../obj/objArchievements";
 
 export const ModalImg = ({ project, onClose,isModalOpen, traducciones, component }) => {
   const modalRef = useRef();
@@ -73,6 +74,26 @@ export const ModalImg = ({ project, onClose,isModalOpen, traducciones, component
 
           <div className="grid grid-cols-1  gap-4">
            {traducciones.workExperience}
+          </div>
+        </div>
+      </div>
+    ),
+    archiviements: (
+      <div className="bg-white dark:bg-black p-4 rounded-md w-full max-w-3xl relative border border-green-600 max-h-[90vh] overflow-y-auto">
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-4 text-2xl font-bold text-green-600"
+        >
+          &times;
+        </button>
+
+        <div className="bg-black/80 p-6 rounded-xl shadow-xl max-w-5xl mx-auto text-white">
+          <h2 className="text-3xl font-bold text-center text-green-400 mb-8 border-b-4 border-green-400 pb-2">
+            {traducciones.btnArchievements}
+          </h2>
+
+          <div className="grid grid-cols-1  gap-4">
+           {traducciones.archiviements}
           </div>
         </div>
       </div>

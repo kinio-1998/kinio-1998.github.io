@@ -1,12 +1,38 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ traducciones, toggleLanguage, language }) => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const ipAutorizadas = [
+    "187.149.12.166", // otra IP permitida si quieres
+  ];
+
+  const handleLogoClick = async () => {
+    try {
+      const res = await fetch("https://api.ipify.org?format=json");
+      const data = await res.json();
+      const ip = data.ip;
+
+      if (ipAutorizadas.includes(ip)) {
+        navigate("/admin");
+      } else {
+        navigate("/#home");
+      }
+    } catch (error) {
+      console.error("Error al obtener IP:", error);
+      navigate("/#home");
+    }
+  };
 
   return (
     <nav className="bg-black shadow-md fixed top-0 w-full z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="#home" className="hover:text-white text-green-600">
+        <div
+          onClick={handleLogoClick}
+          className="hover:text-white text-green-600 cursor-pointer"
+        >
           <div className="flex items-center space-x-3">
             <div className="rounded-full overflow-hidden h-12 w-12">
               <img
@@ -17,7 +43,8 @@ const Navbar = ({ traducciones, toggleLanguage, language }) => {
             </div>
             <span className="text-2xl font-bold text-green-600">Kinio</span>
           </div>
-        </a>
+        </div>
+
         <button className="md:hidden" onClick={() => setOpen(!open)}>
           ☰
         </button>

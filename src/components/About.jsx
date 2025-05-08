@@ -53,6 +53,12 @@ const About = ({ traducciones }) => {
         >
           {traducciones.btnLaboral}
         </a>        
+        <a
+          onClick={() => setSelectedPreview({ type: "archiviements", data: traducciones })}
+          className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
+        >
+          {traducciones.btnArchievements}
+        </a>        
       </div>
       {selectedPreview && (
         <ModalImg

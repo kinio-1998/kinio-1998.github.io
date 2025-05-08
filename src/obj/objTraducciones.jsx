@@ -1,3 +1,4 @@
+import { archiviements } from "./objArchievements";
 import { certifications } from "./objCertifications";
 import { experiences } from "./objExperience";
 import { techIcons } from "./objIcons";
@@ -62,6 +63,7 @@ export const objTraducciones = {
       ],
       btnAcademy: "Formación Académica",
       btnLaboral: "Experiencia Laboral",
+      btnArchievements: "Logros Destacados",
       academyInfo: (
         <div>
           <h3 className="text-xl font-semibold text-green-400 mb-2">
@@ -150,6 +152,23 @@ export const objTraducciones = {
           </ul>
         </div>
       )),
+      archiviements: (
+        <div className="mb-8">
+          <div>
+            <ul className="space-y-3 text-sm text-gray-200">
+              {archiviements.es.map((arc, i) => (
+                <li key={i} className="  border-green-500 list-disc ">
+                  <div className="col-span-4">
+                    <h4 className="text-white font-semibold text-base  ">
+                      {arc}
+                    </h4>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ),
     },
     en: {
       description:
@@ -171,6 +190,7 @@ export const objTraducciones = {
       ],
       btnAcademy: "Academic Background",
       btnLaboral: "Work Experience",
+      btnArchievements: "Notable Achievements",
       academyInfo: (
         <div>
           <h3 className="text-xl font-semibold text-green-400 mb-2">
@@ -259,6 +279,23 @@ export const objTraducciones = {
           </ul>
         </div>
       )),
+      archiviements: (
+        <div className="mb-8">
+          <div>
+            <ul className="space-y-3 text-sm text-gray-200">
+              {archiviements.en.map((arc, i) => (
+                <li key={i} className="  border-green-500 list-disc ">
+                  <div className="col-span-4">
+                    <h4 className="text-white font-semibold text-base  ">
+                      {arc}
+                    </h4>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ),
     },
   },
   projects: {
@@ -284,6 +321,7 @@ export const objTraducciones = {
       lblLocation: "Ubicación: Culiacán, Sinaloa, México",
       lblLocationChange: "(Disponible a cambio de residencia)",
       lblSugerency: "Para una contactarme de forma más rápida utiliza Whatsapp",
+      counter: "Contador de visitas: ",
     },
     en: {
       title: "Contact",
@@ -299,10 +337,7 @@ export const objTraducciones = {
       lblLocation: "Location: Culiacán, Sinaloa, Mexico",
       lblLocationChange: "(Willing to relocate)",
       lblSugerency: "For faster contact, use WhatsApp",
+      counter: "Visit count: ",
     },
-  },
-  index: {
-    es: { title: "Kinio Portafolio" },
-    en: { title: "Kinio PortFolio" },
   },
 };

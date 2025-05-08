@@ -139,7 +139,7 @@ export const Contact = ({ traducciones }) => {
         {traducciones.lblSugerency}
       </p>
 
-      <Counter />
+      <Counter lblCounter={traducciones.counter}/>
     </section>
   );
 };
