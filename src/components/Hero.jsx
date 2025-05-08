@@ -6,12 +6,12 @@ const Hero = ({ traducciones }) => {
       id="home"
     >
       <div className="absolute inset-0 flex justify-center items-center">
-        <div className="w-4/6 bg-white/90 dark:bg-black/90 text-white p-10 rounded-lg text-center">
+        <div className="w-4/6 bg-black/90 text-white p-10 rounded-lg text-center">
           <h1 className="text-4xl sm:text-5xl font-bold">
             {traducciones.introduce}{" "}
             <span className="text-green-600">Carlos Daniel Duarte León</span>
           </h1>
-          <h2 className="text-2xl sm:text-3xl font-medium mt-4   dark:text-green-600">
+          <h2 className="text-2xl sm:text-3xl font-medium mt-4 dark:text-green-600">
             {traducciones.title}
           </h2>
           <p className="mt-4 max-w-xl mx-auto text-black dark:text-gray-200">

@@ -9,7 +9,7 @@ export const Projects = ({ traducciones }) => {
   const [selectedPreview, setSelectedPreview] = useState(null);
   const { language } = useLanguage();
   return (
-    <section id="projects" className="py-10 px-5  dark:bg-black">
+    <section id="projects" className="py-10 px-5  bg-black">
       <h2 className="text-3xl font-bold mb-6 text-center text-green-600">
         {traducciones.title}
       </h2>
@@ -21,7 +21,7 @@ export const Projects = ({ traducciones }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-green-950/90 shadow-md rounded-lg p-5 hover:shadow-xl transition-shadow h-full flex flex-col"
+            className=" bg-green-950/90 shadow-md rounded-lg p-5 hover:shadow-xl transition-shadow h-full flex flex-col"
           >
             <img
               src={project.image}
