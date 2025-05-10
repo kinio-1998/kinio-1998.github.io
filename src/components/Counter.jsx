@@ -1,21 +1,32 @@
 import { useEffect, useState } from "react";
-import { doc, getDoc } from "firebase/firestore";
-import db from "../firebase.config";
+import getFingerprint from "../utils/getFingerprint";
+import getIp from "../utils/getIp"; // Asegúrate de tener este archivo
 
-export const Counter = ({lblCounter}) => {
+export const Counter = ({ lblCounter }) => {
   const [visits, setVisits] = useState(null);
 
   useEffect(() => {
-    const fetchVisits = async () => {
-      const docRef = doc(db, "contador", "visitas");
-      const docSnap = await getDoc(docRef);
+   console.log("Tracking visit...")
+    const trackVisit = async () => {
+      const fingerprint = await getFingerprint();
+      const ip = await getIp(); // <-- Obtener la IP
 
-      if (docSnap.exists()) {
-        setVisits(docSnap.data().cantidad);
-      }
+      try {
+      await fetch("https://backend-portfolio-beta-three.vercel.app/api/visit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fingerprint, ip }),
+      });
+
+      const res = await fetch("https://backend-portfolio-beta-three.vercel.app/api/visits");
+      const data = await res.json();
+      setVisits(data.visits);
+    } catch (err) {
+      console.error("Error al contar visitas:", err);
+    }
     };
 
-    fetchVisits();
+    trackVisit();
   }, []);
 
   return (
