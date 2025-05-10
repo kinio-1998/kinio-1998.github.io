@@ -70,7 +70,7 @@ export const objProjects = {
       description: "This portfolio was developed using React, Vite, and Tailwind CSS. It presents my projects, work experience, and certifications in a clear and professional manner, with support for both Spanish and English. It features a responsive design for mobile devices and direct links to my social networks and repositories.",
       image: "/./img/portafolio.png",
       link: "https://github.com/kinio-1998/kinio-1998.github.io",
-      techs: ["React", "JavaScript", "Tailwind", "HTML", "CSS", "Vite"],
+      techs: ["React", "JavaScript", "Tailwind", "HTML", "CSS", "Vite","Firebase"],
     },
   ],
 };

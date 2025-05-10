@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt,FaNodeJs,FaWhatsapp, FaPython,FaGithub,FaLinkedin, FaGoogle, FaFileAlt } from "react-icons/fa";
-import { SiTailwindcss, SiVite, SiGooglesheets, SiGoogleappsscript, SiPostgresql,SiMysql  } from "react-icons/si";
+import { SiTailwindcss, SiVite, SiGooglesheets, SiGoogleappsscript, SiPostgresql,SiMysql, SiFirebase  } from "react-icons/si";
 export const techIcons = {
   list: [
     {
@@ -109,6 +109,12 @@ export const techIcons = {
       name: "File",
       icon: <FaFileAlt  className="text-green-600" />,
       show:false
+    },
+    {
+      id: 19,
+      name: "Firebase",
+      icon: <SiFirebase  className="text-red-600" />,
+      show:true
     },
   ],
 

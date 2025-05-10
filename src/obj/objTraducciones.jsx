@@ -26,7 +26,7 @@ export const objTraducciones = {
       title: "Desarrollador Web Jr | Apasionado por la Automatización",
       description:
         "Licenciado en informática con 3 años de experiencia en áreas de sistemas y análisis de datos. \n Durante este tiempo, trabajé con flujos de datos de múltiples lenguajes y bases de datos relacionales, lo que me dio una base sólida en lógica de programación y estructuras de datos. \n Actualmente, me estoy enfocando en el desarrollo web, creando proyectos por mi cuenta y fortaleciendo mis habilidades con tecnologías como HTML, CSS, JavaScript, React y MySQL. Mi objetivo es crecer profesionalmente como desarrollador front-end, aportar soluciones prácticas y seguir aprendiendo constantemente.",
-      link: "../../public/cv/Cv_Li.Duarte.pdf",
+      link: "/./cv/Cv_Li.Duarte.pdf",
       btnDownload: "Descargar CV",
       btnContact: "Contáctame",
     },
@@ -35,7 +35,7 @@ export const objTraducciones = {
       title: "Junior Web Developer | Passionate about Automation",
       description:
         "I'm a developer focused on improving processes, creating modern web experiences, and building useful tools for businesses and people. I love self-learning, automating tasks, and taking on new challenges.",
-      link: "../../public/cv/Cv_Li.Duarte_en.pdf",
+      link: "/./public/cv/Cv_Li.Duarte_en.pdf",
       btnDownload: "Download Resume",
       btnContact: "Get in touch with me",
     },

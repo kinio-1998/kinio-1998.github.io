@@ -6,7 +6,6 @@ export const Counter = ({ lblCounter }) => {
   const [visits, setVisits] = useState(null);
 
   useEffect(() => {
-   console.log("Tracking visit...")
     const trackVisit = async () => {
       const fingerprint = await getFingerprint();
       const ip = await getIp(); // <-- Obtener la IP
