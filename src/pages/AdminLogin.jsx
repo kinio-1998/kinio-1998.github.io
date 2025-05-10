@@ -6,15 +6,27 @@ const AdminLogin = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const correctPassword = "kiniorap1998"; // cámbialo
 
-    if (password === correctPassword) {
-      localStorage.setItem("admin-auth", "true");
-      navigate("/admin");
-    } else {
-      alert("Contraseña incorrecta");
+    try {
+      const res = await fetch("https://backend-portfolio-beta-three.vercel.app/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        localStorage.setItem("admin-auth", "true");
+        navigate("/admin");
+      } else {
+        alert("Contraseña incorrecta");
+      }
+    } catch (err) {
+      console.error("Error en login:", err);
+      alert("Hubo un error al iniciar sesión");
     }
   };
 
