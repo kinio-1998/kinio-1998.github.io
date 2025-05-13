@@ -14,49 +14,55 @@ export const Projects = ({ traducciones }) => {
         {traducciones.title}
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {objProjects[language].map((project, index) => (
-          <motion.div
-            key={project.id || index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className=" bg-green-950/90 shadow-md rounded-lg p-5 hover:shadow-xl transition-shadow h-full flex flex-col"
-          >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-contain rounded-md mb-4  bg-black cursor-pointer hover:brightness-90 transition duration-200"
-              onClick={() => setSelectedPreview({ type: "img", data: project })}
-            />
-            <h3 className="text-xl font-semibold mb-2 text-center text-white">
-              {project.title}
-            </h3>
+        {projects.map((project, index) => {
+          const translation =
+            project.translations[language] || project.translations["es"];
+          return (
+            <motion.div
+              key={project.id || index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-green-950/90 shadow-md rounded-lg p-5 hover:shadow-xl transition-shadow h-full flex flex-col"
+            >
+              <img
+                src={project.image}
+                alt={translation.title}
+                className="w-full h-48 object-contain rounded-md mb-4 bg-black cursor-pointer hover:brightness-90 transition duration-200"
+                onClick={() =>
+                  setSelectedPreview({ type: "img", data: project })
+                }
+              />
+              <h3 className="text-xl font-semibold mb-2 text-center text-white">
+                {translation.title}
+              </h3>
 
-            <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
-              {project.description}
-            </p>
+              <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
+                {translation.description}
+              </p>
 
-            <div className="flex gap-2 mb-4 justify-center">
-              {project.techs.map((tech, index) => (
-                <span key={index} className="text-xl" title={tech}>
-                  {techIcons.getIconByName(tech)}
-                </span>
-              ))}
-            </div>
+              <div className="flex gap-2 mb-4 justify-center">
+                {project.techs.map((tech, index) => (
+                  <span key={index} className="text-xl" title={tech}>
+                    {techIcons.getIconByName(tech)}
+                  </span>
+                ))}
+              </div>
 
-            <div className="flex justify-center mt-auto">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
-              >
-                {traducciones.lblProject}
-              </a>
-            </div>
-          </motion.div>
-        ))}
+              <div className="flex justify-center mt-auto">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
+                >
+                  {traducciones.lblProject}
+                </a>
+              </div>
+            </motion.div>
+          );
+        })}
         {selectedPreview && (
           <ModalImg
             project={selectedPreview.data}

@@ -28,5 +28,19 @@ export const certifications ={
             date:"Nov 2024",
             link:"https://tutorial-sql.s3.amazonaws.com/certificates/28608_Carlos%20daniel_Duarte%20le%C3%B3n/28608_02092024.png"
         },
+        {
+            id:5,
+            institution:"Desafio Latam",
+            title:"Bases de Git, Github",
+            date:"May 2025",
+            link:"https://cdn.filestackcontent.com/kY4gK2JXTmeiWDxdncG1?policy=eyJjYWxsIjpbInJlYWQiXSwiZXhwaXJ5IjoxNzQ3MDc0MTk1LCJwYXRoIjoiLyJ9&signature=4b9a3d1bfad619327768275acc85d61146729284e1024568ab8407af9ecd62b9"
+        },
+        {
+            id:6,
+            institution:"Desafio Latam",
+            title:"Introduccion desarrollo web",
+            date:"May 2025",
+            link:"https://cdn.filestackcontent.com/Y9k2QL4PQ6OdgmNvy87H?policy=eyJjYWxsIjpbInJlYWQiXSwiZXhwaXJ5IjoxNzQ3MDg1MDM2LCJwYXRoIjoiLyJ9&signature=df10d20aad3ce2028e832686d95935dc78fa3502b346010f192ced1012bc340d"
+        },
     ]
 }
