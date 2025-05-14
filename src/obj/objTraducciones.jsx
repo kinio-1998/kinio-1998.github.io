@@ -61,113 +61,21 @@ export const objTraducciones = {
         "Evaluación de riesgos",
         "Trabajo bajo presión",
       ],
-      btnAcademy: "Formación Académica",
-      btnLaboral: "Experiencia Laboral",
-      btnArchievements: "Logros Destacados",
+      lblAcademy: "Formación Académica",
+      lblLaboral: "Experiencia Laboral",
+      lblArchievements: "Logros Destacados",
       academyInfo: (
-        <div>
-          <h3 className="text-xl font-semibold text-green-400 mb-2">
-            🎓 Educación
-          </h3>
-          <div className="bg-green-950/30 p-4 rounded-lg border-l-4 border-green-500">
-            <h4 className="font-bold">Universidad Autónoma de Sinaloa</h4>
-            <p className="text-sm text-gray-300">
-              2016 - 2021 · Licenciatura en Informática
-            </p>
-            <p className="text-sm mt-1 text-gray-200">
-              <strong>Promedio:</strong> 8.3/10
-            </p>
-            <p className="text-sm text-gray-200">
-              <strong>Proyecto destacado:</strong> Sistema de pagos similar a
-              PayPal en PHP y MySQL.
-            </p>
-          </div>
-        </div>
+        
       ),
       languageInfo: (
-        <div>
-          <h3 className="text-green-500 text-xl font-semibold border-b border-green-500 pb-1 mb-4">
-            🌐 Idiomas
-          </h3>
-          <ul className="list-disc list-inside pb-20">
-            <li>Español - Nativo</li>
-            <li>Inglés - B2</li>
-          </ul>
-        </div>
+        
       ),
       certificationInfo: (
-        <div className="mb-8">
-          <div>
-            <h3 className="text-xl font-semibold text-green-400 mb-2">
-              📜 Certificaciones
-            </h3>
-            <ul className="space-y-3 text-sm text-gray-200">
-              {certifications.es.map((cert) => (
-                <li
-                  key={cert.id}
-                  className="border-l-4 border-green-500 pl-2 rounded-lg"
-                >
-                  <div className="grid grid-cols-5 gap-4">
-                    <div className="col-span-4">
-                      <h4 className="text-green-600 font-semibold">
-                        {cert.institution}
-                      </h4>
-                      <p className="text-white text-sm">{cert.title}</p>
-                      <p className="text-gray-400 text-xs">{cert.date}</p>
-                    </div>
-                    <div className="col-span-1 flex items-center justify-end">
-                      <a
-                        href={cert.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-green-600 hover:text-green-300"
-                        title="Ver certificado"
-                      >
-                        <i className="text-xl flex ">
-                          {techIcons.getIconByName("File")}
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        
       ),
-      workExperience: experiences.es.map((exp) => (
-        <div
-          className="border-l-4 border-green-500 bg-green-950/30 p-4 rounded-lg"
-          key={exp.id}
-        >
-          <h3 className="text-lg font-semibold text-green-300">
-            {exp.company}
-          </h3>
-          <p className="text-sm text-gray-400">{exp.date}</p>
-          <p className="font-bold text-white mt-2">{exp.title}</p>
-          <ul className="list-disc list-inside mt-3 text-xs text-gray-200 space-y-1">
-            {exp.activities.map((act, i) => (
-              <li key={i}>{act}</li>
-            ))}
-          </ul>
-        </div>
-      )),
+      workExperience: 
       archiviements: (
-        <div className="mb-8">
-          <div>
-            <ul className="space-y-3 text-sm text-gray-200">
-              {archiviements.es.map((arc, i) => (
-                <li key={i} className="  border-green-500 list-disc ">
-                  <div className="col-span-4">
-                    <h4 className="text-white font-semibold text-base  ">
-                      {arc}
-                    </h4>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        
       ),
     },
     en: {
@@ -188,9 +96,9 @@ export const objTraducciones = {
         "Risk assessment",
         "Working under pressure",
       ],
-      btnAcademy: "Academic Background",
-      btnLaboral: "Work Experience",
-      btnArchievements: "Notable Achievements",
+      lblAcademy: "Academic Background",
+      lblLaboral: "Work Experience",
+      lblArchievements: "Notable Achievements",
       academyInfo: (
         <div>
           <h3 className="text-xl font-semibold text-green-400 mb-2">

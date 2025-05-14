@@ -1,4 +1,4 @@
-export const projects = [
+export const objProjects = [
   {
     id: 1,
     image: "/./img/ventas_digitales.png",

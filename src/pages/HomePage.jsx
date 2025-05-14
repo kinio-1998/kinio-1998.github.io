@@ -6,14 +6,16 @@ import Navbar from "../components/Navbar";
 import { Projects } from "../components/Projects";
 import { Skills } from "../components/Skills";
 import { useLanguage } from "../context/LanguajeContent";
-import { objTraducciones } from "../obj/objTraducciones";
 import { Toaster } from "react-hot-toast";
 import VisitorTracker from "../components/VisitorTracker";
 import { AnimatePresence, motion } from "framer-motion";
+import { objEsp } from "../obj/traducciones/objEsp";
+import { objEng } from "../obj/traducciones/objEng";
 
 export default function HomePage() {
   const { language, toggleLanguage } = useLanguage();
-
+  let idioma =[];
+  if(language === "es"? idioma = objEsp : idioma = objEng) 
   return (
     <>
       <VisitorTracker />
@@ -29,7 +31,7 @@ export default function HomePage() {
         }}
       />
       <Navbar
-        traducciones={objTraducciones.nav[language]}
+        traducciones={idioma.nav}
         toggleLanguage={toggleLanguage}
         language={language}
       />
@@ -42,11 +44,11 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           className="min-h-screen bg-[url('/./img/background.avif')] bg-cover bg-center bg-no-repeat bg-fixed scroll-smooth"
         >
-          <Hero traducciones={objTraducciones.hero[language]} />
-          <About traducciones={objTraducciones.about[language]} />
-          <Skills traducciones={objTraducciones.skills[language]} />
-          <Projects traducciones={objTraducciones.projects[language]} />
-          <Contact traducciones={objTraducciones.contact[language]} />
+          <Hero traducciones={idioma.hero} />
+          <About traducciones={idioma.about} />
+          <Skills traducciones={idioma.skills} />
+          <Projects traducciones={idioma.projects} />
+          <Contact traducciones={idioma.contact} />
         </motion.div>
       </AnimatePresence>
     </>

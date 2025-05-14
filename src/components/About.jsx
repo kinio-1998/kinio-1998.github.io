@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ModalImg } from "./ModalIMG";
+import { ModalWrapper } from "./modals/ModalWrapper";
 
 const About = ({ traducciones }) => {
   const [selectedPreview, setSelectedPreview] = useState(null);
@@ -45,23 +45,23 @@ const About = ({ traducciones }) => {
           onClick={() => setSelectedPreview({ type: "academy", data: traducciones })}
           className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
         >
-          {traducciones.btnAcademy}
+          {traducciones.lblAcademy}
         </a>
         <a
           onClick={() => setSelectedPreview({ type: "work", data: traducciones })}
           className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
         >
-          {traducciones.btnLaboral}
+          {traducciones.lblLaboral}
         </a>        
         <a
           onClick={() => setSelectedPreview({ type: "archiviements", data: traducciones })}
           className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
         >
-          {traducciones.btnArchievements}
+          {traducciones.lblArchievements}
         </a>        
       </div>
       {selectedPreview && (
-        <ModalImg
+        <ModalWrapper
           project={selectedPreview.data}
           onClose={() => setSelectedPreview(null)}
           isModalOpen={selectedPreview !== null}

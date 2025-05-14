@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useLanguage } from "../context/LanguajeContent";
 import { techIcons } from "../obj/objIcons";
 import { objProjects } from "../obj/objProjects";
-import { ModalImg } from "./ModalIMG";
 import { motion } from "framer-motion";
+import { ModalWrapper } from "./modals/ModalWrapper";
 
 export const Projects = ({ traducciones }) => {
   const [selectedPreview, setSelectedPreview] = useState(null);
@@ -14,7 +14,7 @@ export const Projects = ({ traducciones }) => {
         {traducciones.title}
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => {
+        {objProjects.map((project, index) => {
           const translation =
             project.translations[language] || project.translations["es"];
           return (
@@ -30,8 +30,9 @@ export const Projects = ({ traducciones }) => {
                 src={project.image}
                 alt={translation.title}
                 className="w-full h-48 object-contain rounded-md mb-4 bg-black cursor-pointer hover:brightness-90 transition duration-200"
-                onClick={() =>
-                  setSelectedPreview({ type: "img", data: project })
+                onClick={() =>{
+                 console.log("Project clicked:", project);
+  setSelectedPreview({ type: "img", data: project });}
                 }
               />
               <h3 className="text-xl font-semibold mb-2 text-center text-white">
@@ -63,8 +64,8 @@ export const Projects = ({ traducciones }) => {
             </motion.div>
           );
         })}
-        {selectedPreview && (
-          <ModalImg
+        {selectedPreview?.data && (
+          <ModalWrapper
             project={selectedPreview.data}
             onClose={() => setSelectedPreview(null)}
             isModalOpen={selectedPreview !== null}
