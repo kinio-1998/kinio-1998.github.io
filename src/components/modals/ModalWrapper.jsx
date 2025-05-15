@@ -62,7 +62,7 @@ export const ModalWrapper = ({  project,  onClose,  isModalOpen,  traducciones, 
         }
       }}
     >
-      <div className="bg-white dark:bg-black p-4 rounded-md w-full max-w-3xl relative border border-green-600 max-h-[90vh] overflow-y-auto">
+      <div className="bg-black p-4 rounded-md w-full max-w-3xl relative border border-green-600 max-h-[90vh] overflow-y-auto">
         <h2 className="text-3xl font-bold text-center text-green-600 mb-8 border-b-4 border-green-600 pb-2">
           {lblModal}
         </h2>
@@ -73,7 +73,7 @@ export const ModalWrapper = ({  project,  onClose,  isModalOpen,  traducciones, 
               &times;
             </button>
         <div className="flex gap-4 items-stretch">
-          <div className="bg-white dark:bg-black p-4 rounded-md w-full max-w-3xl border-green-600 max-h-[90vh] overflow-y-auto">
+          <div className="bg-black p-4 rounded-md w-full max-w-3xl border-green-600 max-h-[90vh] overflow-y-auto">
             {modal}
           </div>
         </div>

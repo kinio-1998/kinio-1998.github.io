@@ -39,7 +39,7 @@ export const Projects = ({ traducciones }) => {
                 {translation.title}
               </h3>
 
-              <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
+              <p className="text-gray-300 mb-4 flex-grow">
                 {translation.description}
               </p>
 

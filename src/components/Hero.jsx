@@ -14,7 +14,7 @@ const Hero = ({ traducciones }) => {
           <h2 className="text-2xl sm:text-3xl font-medium mt-4 dark:text-green-600">
             {traducciones.title}
           </h2>
-          <p className="mt-4 max-w-xl mx-auto text-black dark:text-gray-200">
+          <p className="mt-4 max-w-xl mx-auto text-gray-200">
             {traducciones.description}
           </p>
           <div className="mt-6 flex justify-center gap-4">
