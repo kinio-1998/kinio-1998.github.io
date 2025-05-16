@@ -10,7 +10,7 @@ export const Projects = ({ traducciones }) => {
   const { language } = useLanguage();
   return (
     <section id="projects" className="py-10 px-5  bg-black">
-      <h2 className="text-3xl font-bold mb-6 text-center text-green-600">
+      <h2 className="text-3xl font-bold text-green-600 text-center mb-10">
         {traducciones.title}
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

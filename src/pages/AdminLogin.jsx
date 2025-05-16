@@ -1,10 +1,12 @@
-// src/pages/AdminLogin.jsx
+// src/components/AdminLoginModal.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const AdminLogin = () => {
+const AdminLoginModal = ({ isOpen, onClose }) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  if (!isOpen) return null;
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -21,6 +23,7 @@ const AdminLogin = () => {
       if (data.success) {
         localStorage.setItem("admin-auth", "true");
         navigate("/admin");
+        onClose();
       } else {
         alert("Contraseña incorrecta");
       }
@@ -30,26 +33,45 @@ const AdminLogin = () => {
     }
   };
 
+  const handleModalContentClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md">
-        <h2 className="text-xl font-bold mb-4">Acceso al Panel</h2>
+    <div
+      className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+      onClick={onClose}
+    >
+      <form
+        onClick={handleModalContentClick}
+        onSubmit={handleLogin}
+        className="bg-white p-6 rounded shadow-md w-80"
+      >
+        <h2 className="text-2xl font-bold text-green-600 text-center mb-6">Acceso al Panel</h2>
         <input
           type="password"
           className="border p-2 w-full mb-4"
           placeholder="Contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          autoFocus
         />
         <button
           type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded w-full"
+          className="bg-green-600 text-white px-4 py-2 rounded w-full mb-2"
         >
           Entrar
+        </button>
+        <button
+          type="button"
+          onClick={onClose}
+          className="text-red-500 underline text-center w-full"
+        >
+          Cancelar
         </button>
       </form>
     </div>
   );
 };
 
-export default AdminLogin;
+export default AdminLoginModal;

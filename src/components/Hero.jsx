@@ -1,11 +1,10 @@
 const Hero = ({ traducciones }) => {
   return (
     <section
-      className="relative h-[100vh] bg-no-repeat bg-cover bg-center"
+      className="relative min-h-screen pt-20 bg-no-repeat bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: "url('../img/background.png')" }}
       id="home"
     >
-      <div className="absolute inset-0 flex justify-center items-center">
         <div className="w-4/6 bg-black/90 text-white p-10 rounded-lg text-center">
           <h1 className="text-4xl sm:text-5xl font-bold">
             {traducciones.introduce}{" "}
@@ -27,12 +26,11 @@ const Hero = ({ traducciones }) => {
             </a>
             <a
               href="#contact"
-              className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
+              className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition flex "
             >
               {traducciones.btnContact}
             </a>
           </div>
-        </div>
       </div>
     </section>
   );

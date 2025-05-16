@@ -38,7 +38,7 @@ export const Contact = ({ traducciones }) => {
   return (
     <section id="contact" className="py-16 bg-neutral-950">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-green-600 mb-4">{traducciones.title}</h2>
+        <h2 className="text-3xl font-bold text-green-600 text-center mb-10">{traducciones.title}</h2>
         <p className="text-green-600 mb-8">{traducciones.lblContact}</p>
 
         <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">

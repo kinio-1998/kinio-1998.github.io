@@ -8,7 +8,7 @@ const About = ({ traducciones }) => {
       id="about"
       className="min-h-screen flex flex-col items-center justify-center px-6 py-16 gap-10 bg-black text-white"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold text-green-600 mb-8 text-center">
+      <h2 className="text-3xl font-bold text-green-600 text-center mb-10">
         {traducciones.title}
       </h2>
 
@@ -40,7 +40,7 @@ const About = ({ traducciones }) => {
           ))}
         </ul>
       </div>
-      <div className="flex justify-between gap-10">
+      <div className="flex flex-col sm:flex-row sm:justify-center gap-4">
         <a
           onClick={() => setSelectedPreview({ type: "academy", data: traducciones })}
           className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"

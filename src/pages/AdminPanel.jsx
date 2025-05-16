@@ -33,8 +33,8 @@ const AdminPanel = () => {
   }, []);
 
   return (
-    <div className="p-6 text-white bg-gray-900 min-h-screen">
-      <h1 className="text-3xl font-bold mb-4">🔐 Panel de Administración</h1>
+    <div className="p-6 text-white bg-neutral-950 min-h-screen">
+      <h1 className="text-3xl font-bold text-green-600 text-center mb-10">🔐 Panel de Administración</h1>
 
       <div className="mb-6">
         <h2 className="text-xl font-semibold">Total de visitas únicas:</h2>
@@ -46,8 +46,8 @@ const AdminPanel = () => {
       <div>
         <h2 className="text-xl font-semibold mb-2">Listado de visitantes:</h2>
         <div className="overflow-auto">
-          <table className="min-w-full bg-gray-800 rounded-md overflow-hidden">
-            <thead className="bg-gray-700 text-sm text-left uppercase">
+          <table className="min-w-full bg-green-950/30 rounded-md overflow-hidden">
+            <thead className="bg-green-600 text-sm text-left uppercase">
               <tr>
                 <th className="px-4 py-2">IP</th>
                 <th className="px-4 py-2">Fingerprint</th>
@@ -59,7 +59,7 @@ const AdminPanel = () => {
             </thead>
             <tbody className="text-sm">
               {visitors.map((visitor) => (
-                <tr key={visitor.id} className="border-t border-gray-600">
+                <tr key={visitor.id} className="border-t border-black">
                 <td className="px-4 py-2">{visitor.ip}</td>
                 <td className="px-4 py-2 truncate max-w-[120px]">{visitor.fingerprint}</td>
                 <td className="px-4 py-2">{visitor.ubicacion || "-"}</td>
