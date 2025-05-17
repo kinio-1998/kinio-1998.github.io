@@ -4,6 +4,7 @@ import { ModalAcademy } from "./ModalAcademy";
 import { ModalWork } from "./ModalWork";
 import { ModalArchievements } from "./ModalArchievements";
 import { useLanguage } from "../../context/LanguajeContent";
+import { ModalCoverLetter } from "./ModalCoverLetter";
 
 export const ModalWrapper = ({  project,  onClose,  isModalOpen,  traducciones,  component,}) => {
   let modal = [];
@@ -12,20 +13,24 @@ export const ModalWrapper = ({  project,  onClose,  isModalOpen,  traducciones, 
   switch (component) {
     case "img":
       modal = <ModalImg traducciones={traducciones} project={project}/>;
-      if(language === "es" ? lblModal = project.translations.es.title : lblModal = project.translations.en.title)
+      language === "es" ? lblModal = project.translations.es.title : lblModal = project.translations.en.title
       break;
     case "academy":
       modal = <ModalAcademy traducciones={traducciones} />;
-      lblModal = traducciones.lblAcademy;
+      lblModal = project;
 
       break;
     case "work":
       modal = <ModalWork traducciones={traducciones} />;
-      lblModal = traducciones.lblLaboral;
+      lblModal = project;
       break;
-    case "archiviements":
+    case "archievements":
       modal = <ModalArchievements />;
-      lblModal = traducciones.lblArchievements;
+      lblModal = project;
+      break;
+    case "coverLetter":
+      modal = <ModalCoverLetter />;
+      lblModal = project;
       break;
 
     default:

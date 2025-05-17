@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { ModalWrapper } from "./modals/ModalWrapper";
+import { objButtonsAbout } from "../obj/objButtonsAbout";
+import { useLanguage } from "../context/LanguajeContent";
 
 const About = ({ traducciones }) => {
   const [selectedPreview, setSelectedPreview] = useState(null);
+  const {language} = useLanguage();
+  let lblButton =""
   return (
     <section
       id="about"
@@ -41,25 +45,22 @@ const About = ({ traducciones }) => {
         </ul>
       </div>
       <div className="flex justify-between gap-10">
-        <a
-          onClick={() => setSelectedPreview({ type: "academy", data: traducciones })}
-          className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
-        >
-          {traducciones.lblAcademy}
-        </a>
-        <a
-          onClick={() => setSelectedPreview({ type: "work", data: traducciones })}
-          className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
-        >
-          {traducciones.lblLaboral}
-        </a>        
-        <a
-          onClick={() => setSelectedPreview({ type: "archiviements", data: traducciones })}
-          className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition"
-        >
-          {traducciones.lblArchievements}
-        </a>        
-      </div>
+  {objButtonsAbout.map((btn, i) => (
+    <a
+      key={i}
+      onClick={() =>
+        setSelectedPreview({
+          type: btn.name,
+          data: language === "es" ? btn.lblButton.es : btn.lblButton.en,
+        })
+      }
+      className="border border-green-600 text-green-600 px-6 py-3 rounded hover:bg-green-300 hover:text-white transition cursor-pointer"
+    >
+      {language === "es" ? btn.lblButton.es : btn.lblButton.en}
+    </a>
+  ))}
+</div>
+
       {selectedPreview && (
         <ModalWrapper
           project={selectedPreview.data}
