@@ -9,16 +9,30 @@ export const objEng = {
   hero: {
     introduce: "Hi, I'm,",
     title: "Junior Web Developer | Passionate about Automation",
-    description:
-      "I'm a developer focused on improving processes, creating modern web experiences, and building useful tools for businesses and people. I love self-learning, automating tasks, and taking on new challenges.",
-    link: "/./public/cv/Cv_Li.Duarte_en.pdf",
+    description: `
+Web developer with a self-taught mindset, naturally curious, and passionate about building functional solutions.
+
+I specialize in technologies like React, Firebase, and Apps Script, and I enjoy understanding how each layer of a system works.
+
+Although my main focus is web development, I'm also interested in the world of data and motivated to keep learning with the goal of exploring areas like data science.
+
+I'm looking for remote or on-site opportunities that allow me to grow, add value, and continue evolving as a professional.`,
+    link: "/./docs/Cv_Li.Duarte_en.pdf",
     btnDownload: "Download Resume",
     btnContact: "Get in touch with me",
   },
   about: {
     title: "About me",
-    description:
-      "I'm Carlos Daniel Duarte León, a Computer Science graduate with experience as a web developer and technical analyst. Passionate about technology, process automation, and creating useful solutions for people.",
+    description: `Hi, I'm Carlos Duarte, though many know me as Kinio.
+I'm a Junior Web Developer with a strong self-taught mindset and a deep passion for understanding how things work behind the scenes.
+
+I started by building simple solutions out of curiosity and ended up creating my own portfolio using technologies like JavaScript, React, and Firebase. I've worked with tools like Google Apps Script to automate tasks, and I've also explored Python to optimize personal projects.
+My professional background includes roles such as web administrator and incident analyst, where I learned to review complete system flows from frontend to backend and work with databases and technical documentation.
+
+While my main focus is web development, I’m also drawn to the world of data. I'm currently exploring data science, as I’m fascinated by analysis, logic, and the power of making decisions based on real insights.
+
+I'm curious, analytical, and eager to keep learning and growing.
+I'm currently looking for remote or on-site opportunities where I can bring value, continue developing my skills, and contribute meaningfully to a team.`,
     text: "I'm known for my commitment, continuous improvement, teamwork, and problem-solving. I enjoy constantly learning and participating in projects where I can combine creativity and logic to achieve results that make a positive impact.",
     skills: [
       "Analytical thinking",

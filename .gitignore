@@ -1,2 +1,6 @@
 node_modules
 /dist
+/src/components/Counter.jsx
+/src/components/VisitorTracker.jsx
+/src/pages/AdminLogin.jsx
+/src/pages/AdminPanel.jsx

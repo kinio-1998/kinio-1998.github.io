@@ -29,7 +29,7 @@ export const ModalWrapper = ({  project,  onClose,  isModalOpen,  traducciones, 
       lblModal = project;
       break;
     case "coverLetter":
-      modal = <ModalCoverLetter />;
+      modal = <ModalCoverLetter traducciones = {traducciones.modalCoverLetter}/>;
       lblModal = project;
       break;
 

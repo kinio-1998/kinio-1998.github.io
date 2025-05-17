@@ -6,7 +6,6 @@ import { useLanguage } from "../context/LanguajeContent";
 const About = ({ traducciones }) => {
   const [selectedPreview, setSelectedPreview] = useState(null);
   const {language} = useLanguage();
-  let lblButton =""
   return (
     <section
       id="about"
@@ -17,18 +16,18 @@ const About = ({ traducciones }) => {
       </h2>
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-6xl">
-        <div className="w-full md:w-1/3 flex justify-start">
+        <div className="w-full md:w-1/4 flex justify-start">
           <img
             src="/img/logotipo.png"
             alt="Mi Foto"
             className="rounded-3xl shadow-lg w-64 h-64 object-cover"
           />
         </div>
-        <div className="w-full md:w-2/3 text-center md:text-left">
-          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+        <div className="w-full md:w-3/4 md:text-left ">
+          <p className="text-lg text-gray-300 mb-6 text-justify whitespace-pre-line leading-tight">
             {traducciones.description}
           </p>
-          <p className="text-lg text-gray-300 leading-relaxed">
+          <p className="text-lg text-gray-300  text-justify whitespace-pre-line leading-tight" >
             {traducciones.text}
           </p>
         </div>
@@ -44,7 +43,7 @@ const About = ({ traducciones }) => {
           ))}
         </ul>
       </div>
-      <div className="flex justify-between gap-10">
+      <div className="flex flex-col sm:flex-row sm:justify-center gap-4">
   {objButtonsAbout.map((btn, i) => (
     <a
       key={i}

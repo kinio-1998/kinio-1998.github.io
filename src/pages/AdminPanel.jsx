@@ -10,7 +10,7 @@ const AdminPanel = () => {
     const fetchData = async () => {
       try {
         const visitsRes = await fetch(
-          "https://backend-portfolio-beta-three.vercel.app/api/visits"
+          "https://backend-desarrollo-mu.vercel.app/api/visits"
         );
         const visitsData = await visitsRes.json();
         setTotal(visitsData.visits || 0);
@@ -20,7 +20,7 @@ const AdminPanel = () => {
 
       try {
         const visitorsRes = await fetch(
-          "https://backend-portfolio-beta-three.vercel.app/api/visitors"
+          "https://backend-desarrollo-mu.vercel.app/api/visitors"
         );
         const visitorsData = await visitorsRes.json();
         setVisitors(visitorsData.visitors || []);
@@ -33,11 +33,11 @@ const AdminPanel = () => {
   }, []);
 
   return (
-    <div className="p-6 text-white bg-gray-900 min-h-screen">
-      <h1 className="text-3xl font-bold mb-4">🔐 Panel de Administración</h1>
+    <div className="p-6 text-white bg-neutral-950 min-h-screen">
+      <h1 className="text-3xl font-bold text-green-600 text-center mb-10">🔐 Panel de Administración</h1>
 
-      <div className="mb-6">
-        <h2 className="text-xl font-semibold">Total de visitas únicas:</h2>
+      <div className="mb-6 text-center">
+        <h2 className="text-xl font-semibold ">Total de visitas únicas:</h2>
         <p className="text-green-400 text-2xl mt-2">
           {total !== null ? total : "Cargando..."}
         </p>
@@ -46,8 +46,8 @@ const AdminPanel = () => {
       <div>
         <h2 className="text-xl font-semibold mb-2">Listado de visitantes:</h2>
         <div className="overflow-auto">
-          <table className="min-w-full bg-gray-800 rounded-md overflow-hidden">
-            <thead className="bg-gray-700 text-sm text-left uppercase">
+          <table className="min-w-full bg-green-950/30 rounded-md overflow-hidden">
+            <thead className="bg-green-600 text-sm text-left uppercase">
               <tr>
                 <th className="px-4 py-2">IP</th>
                 <th className="px-4 py-2">Fingerprint</th>
@@ -59,7 +59,7 @@ const AdminPanel = () => {
             </thead>
             <tbody className="text-sm">
               {visitors.map((visitor) => (
-                <tr key={visitor.id} className="border-t border-gray-600">
+                <tr key={visitor.id} className="border-t border-black">
                 <td className="px-4 py-2">{visitor.ip}</td>
                 <td className="px-4 py-2 truncate max-w-[120px]">{visitor.fingerprint}</td>
                 <td className="px-4 py-2">{visitor.ubicacion || "-"}</td>
@@ -90,7 +90,10 @@ const AdminPanel = () => {
 
       <div className="flex justify-end">
         <button
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            localStorage.removeItem("admin-auth");
+          }}
           className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 mt-10"
         >
           ← Volver al sitio

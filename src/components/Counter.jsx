@@ -11,13 +11,13 @@ export const Counter = ({ lblCounter }) => {
       const ip = await getIp(); // <-- Obtener la IP
 
       try {
-      await fetch("https://backend-portfolio-beta-three.vercel.app/api/visit", {
+      await fetch("https://backend-desarrollo-mu.vercel.app/api/visit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fingerprint, ip }),
       });
 
-      const res = await fetch("https://backend-portfolio-beta-three.vercel.app/api/visits");
+      const res = await fetch("https://backend-desarrollo-mu.vercel.app/api/visits");
       const data = await res.json();
       setVisits(data.visits);
     } catch (err) {
