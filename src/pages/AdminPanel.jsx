@@ -10,7 +10,7 @@ const AdminPanel = () => {
     const fetchData = async () => {
       try {
         const visitsRes = await fetch(
-          "https://backend-desarrollo-mu.vercel.app/api/visits"
+          "https://backend-portfolio-beta-three.vercel.app/api/visits"
         );
         const visitsData = await visitsRes.json();
         setTotal(visitsData.visits || 0);
@@ -20,7 +20,7 @@ const AdminPanel = () => {
 
       try {
         const visitorsRes = await fetch(
-          "https://backend-desarrollo-mu.vercel.app/api/visitors"
+          "https://backend-portfolio-beta-three.vercel.app/api/visitors"
         );
         const visitorsData = await visitorsRes.json();
         setVisitors(visitorsData.visitors || []);

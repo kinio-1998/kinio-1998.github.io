@@ -10,7 +10,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://backend-desarrollo-mu.vercel.app/api/login", {
+      const res = await fetch("https://backend-portfolio-beta-three.vercel.app/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
