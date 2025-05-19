@@ -25,8 +25,10 @@ export const Contact = ({ traducciones }) => {
       if (response.ok) {
         toast.success("Mensaje enviado correctamente ✅");
         form.reset();
+        setLoading(false);
       } else {
         toast.error("Error al enviar el mensaje ❌");
+        setLoading(false);
       }
     } catch (error) {
       toast.error("Error de red. Intenta más tarde ⚠️");

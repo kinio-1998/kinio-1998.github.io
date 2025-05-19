@@ -42,7 +42,7 @@ export default function HomePage() {
           animate={{ opacity: 1, backgroundColor: "rgba(5, 46, 22, 0.3)" }}
           exit={{ opacity: 0, backgroundColor: "rgba(0,0,0,0)" }}
           transition={{ duration: 0.5 }}
-          className="min-h-screen bg-[url('/./img/background.avif')] bg-cover bg-center bg-no-repeat bg-fixed scroll-smooth"
+          className="min-h-screen bg-[url('/./img/background.png')] bg-cover bg-center bg-no-repeat bg-fixed scroll-smooth"
         >
           <Hero traducciones={idioma.hero} />
           <About traducciones={idioma.about} />
