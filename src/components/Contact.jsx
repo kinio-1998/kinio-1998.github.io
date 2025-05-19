@@ -15,7 +15,7 @@ export const Contact = ({ traducciones }) => {
 
     try {
       const response = await fetch(
-        "https://backend-portfolio-beta-three.vercel.app/api/sendFormspree",
+        "https://backend-portfolio-beta-three.vercel.app/api/sendEmailFormSpree",
         {
           method: "POST",
           body: data,
