@@ -14,13 +14,13 @@ export const Contact = ({ traducciones }) => {
     const data = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/mqaqpwzy", {
-        method: "POST",
-        body: data,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://backend-portfolio-beta-three.vercel.app/api/sendFormspree",
+        {
+          method: "POST",
+          body: data,
+        }
+      );
 
       if (response.ok) {
         toast.success("Mensaje enviado correctamente ✅");
@@ -30,19 +30,21 @@ export const Contact = ({ traducciones }) => {
       }
     } catch (error) {
       toast.error("Error de red. Intenta más tarde ⚠️");
-    } finally {
-      setLoading(false);
     }
   };
 
   return (
     <section id="contact" className="py-16 bg-neutral-950">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-green-600 mb-4">{traducciones.title}</h2>
+        <h2 className="text-3xl font-bold text-green-600 mb-4">
+          {traducciones.title}
+        </h2>
         <p className="text-green-600 mb-8">{traducciones.lblContact}</p>
 
         <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6">
-          <label htmlFor="nombre" className="sr-only">{traducciones.lblName}</label>
+          <label htmlFor="nombre" className="sr-only">
+            {traducciones.lblName}
+          </label>
           <input
             id="nombre"
             type="text"
@@ -52,7 +54,9 @@ export const Contact = ({ traducciones }) => {
             className="p-3 rounded-md border border-green-600 bg-green-950/90 dark:text-white  placeholder:italic placeholder:text-green-700  focus:border-2 focus:border-green-400 focus:outline-none"
           />
 
-          <label htmlFor="email" className="sr-only">{traducciones.lblEmail}</label>
+          <label htmlFor="email" className="sr-only">
+            {traducciones.lblEmail}
+          </label>
           <input
             id="email"
             type="email"
@@ -62,7 +66,9 @@ export const Contact = ({ traducciones }) => {
             className="p-3 rounded-md border border-green-600 bg-green-950/90 dark:text-white  placeholder:italic placeholder:text-green-700  focus:border-2 focus:border-green-400 focus:outline-none"
           />
 
-          <label htmlFor="mensaje" className="sr-only">{traducciones.lblMessage}</label>
+          <label htmlFor="mensaje" className="sr-only">
+            {traducciones.lblMessage}
+          </label>
           <textarea
             id="mensaje"
             name="mensaje"
@@ -139,7 +145,7 @@ export const Contact = ({ traducciones }) => {
         {traducciones.lblSugerency}
       </p>
 
-      <Counter lblCounter={traducciones.counter}/>
+      <Counter lblCounter={traducciones.counter} />
     </section>
   );
 };
