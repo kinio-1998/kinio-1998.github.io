@@ -1,5 +1,5 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt,FaNodeJs,FaWhatsapp, FaPython,FaGithub,FaLinkedin, FaGoogle, FaFileAlt } from "react-icons/fa";
-import { SiTailwindcss, SiVite, SiGooglesheets, SiGoogleappsscript, SiPostgresql,SiMysql, SiFirebase  } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt,FaNodeJs,FaWhatsapp, FaPython,FaGithub,FaLinkedin, FaGoogle, FaFileAlt, FaTelegram } from "react-icons/fa";
+import { SiTailwindcss, SiVite, SiGooglesheets, SiGoogleappsscript, SiPostgresql,SiMysql, SiFirebase, SiExpress, SiVercel, SiFormspree  } from "react-icons/si";
 export const techIcons = {
   list: [
     {
@@ -116,8 +116,32 @@ export const techIcons = {
       icon: <SiFirebase  className="text-red-600" />,
       show:true
     },
+    {
+      id: 20,
+      name: "Express",
+      icon: <SiExpress  className="text-gray-400" />,
+      show:true
+    },
+    {
+      id: 21,
+      name: "Vercel",
+      icon: <SiVercel  className="text-white" />,
+      show:true
+    },
+    {
+      id: 21,
+      name: "Telegram Bot",
+      icon: <FaTelegram  className="text-cyan-400" />,
+      show:true
+    },
+    {
+      id: 22,
+      name: "Formspree",
+      icon: <SiFormspree  className="text-red-600" />,
+      show:true
+    },
   ],
-
+  
   getIconByName(name) {
     return this.list.find((item) => item.name === name)?.icon || null;
   },

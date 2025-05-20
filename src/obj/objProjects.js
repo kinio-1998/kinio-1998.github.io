@@ -71,4 +71,22 @@ export const objProjects = [
       },
     },
   },
+  {
+    id: 5,
+    image: "/./img/telegramBot.png",
+    link: "https://github.com/kinio-1998/backendPortfolio",
+    techs: ["Node", "Express", "Vercel", "Telegram Bot", "Formspree"],
+    translations: {
+      es: {
+        title: "Backend del Portafolio",
+        description:
+          "Este backend desarrollado en Node.js y Express gestiona funciones clave de mi portafolio como el registro de visitas únicas mediante IP y fingerprint, el envío de notificaciones en tiempo real a través de Telegram y la gestión segura de formularios de contacto mediante Formspree. Desplegado en Vercel, permite separar la lógica sensible del frontend para mejorar la seguridad y escalabilidad del proyecto.",
+      },
+      en: {
+        title: "Portfolio Backend",
+        description:
+          "This backend, developed with Node.js and Express, handles key functionalities of my portfolio such as registering unique visits using IP and fingerprint, sending real-time notifications through Telegram, and securely managing contact forms via Formspree. Deployed on Vercel, it separates sensitive logic from the frontend to enhance the project's security and scalability.",
+      },
+    },
+  },
 ];
