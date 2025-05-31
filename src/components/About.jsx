@@ -18,7 +18,7 @@ const About = ({ traducciones }) => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-6xl">
         <div className="w-full md:w-1/4 flex justify-start">
           <img
-            src="/img/logotipo.png"
+            src="/img/profile.jpg"
             alt="Mi Foto"
             className="rounded-3xl shadow-lg w-64 h-64 object-cover"
           />

@@ -10,11 +10,7 @@ export const objEng = {
     introduce: "Hi, I'm,",
     title: "Junior Web Developer | Passionate about Automation",
     description: `
-Web developer with a self-taught mindset, naturally curious, and passionate about building functional solutions.
-
-I specialize in technologies like React, Firebase, and Apps Script, and I enjoy understanding how each layer of a system works.
-
-Although my main focus is web development, I'm also interested in the world of data and motivated to keep learning with the goal of exploring areas like data science.
+Web developer with a self-taught mindset, naturally curious, and passionate about building functional solutions, I specialize in technologies like React, Firebase, and Apps Script, and I enjoy understanding how each layer of a system works, although my main focus is web development, I'm also interested in the world of data and motivated to keep learning with the goal of exploring areas like data science.
 
 I'm looking for remote or on-site opportunities that allow me to grow, add value, and continue evolving as a professional.`,
     link: "/./docs/Cv_Li.Duarte_en.pdf",

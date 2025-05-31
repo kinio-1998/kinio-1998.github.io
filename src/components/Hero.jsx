@@ -13,7 +13,7 @@ const Hero = ({ traducciones }) => {
           <h2 className="text-2xl sm:text-3xl font-medium mt-4 dark:text-green-600">
             {traducciones.title}
           </h2>
-          <p className="mt-4 text-justify text-gray-200 whitespace-pre-line leading-tight" >
+          <p className="mt-4 text-center text-gray-200 whitespace-pre-line leading-tight" >
             {traducciones.description}
           </p>
           <div className="mt-6 flex justify-center gap-4">

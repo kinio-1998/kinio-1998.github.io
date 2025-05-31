@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 import { useState } from "react";
 import { ModalAdminLogin } from "./modals/ModalAdminLogin";
+import Flag from "react-flagkit";
 
 const Navbar = ({ traducciones, toggleLanguage, language }) => {
   const [open, setOpen] = useState(false); // para menú mobile
@@ -35,7 +36,7 @@ const Navbar = ({ traducciones, toggleLanguage, language }) => {
           </button>
 
           <ul className={`md:flex space-x-6 ${open ? "block" : "hidden"} md:block`}>
-            <li><a href="#home" className="hover:text-white text-green-600">{traducciones.home}</a></li>
+            <li><a href="#home" className="hover:text-white text-green-600 active:text-white active:bg-cyan-50">{traducciones.home}</a></li>
             <li><a href="#about" className="hover:text-white text-green-600">{traducciones.about}</a></li>
             <li><a href="#skills" className="hover:text-white text-green-600">{traducciones.skills}</a></li>
             <li><a href="#projects" className="hover:text-white text-green-600">{traducciones.projects}</a></li>
@@ -43,9 +44,9 @@ const Navbar = ({ traducciones, toggleLanguage, language }) => {
             <li>
               <button
                 onClick={toggleLanguage}
-                className="ml-2 text-sm px-2 py-1 border rounded text-green-600 border-green-600"
+                className="ml-2 text-sm px-2 py-1 text-green-600 border-green-600"
               >
-                {language === "es" ? "EN" : "ES"}
+                {language === "es" ? <Flag country="US"/> : <Flag country="MX" />}
               </button>
             </li>
           </ul>

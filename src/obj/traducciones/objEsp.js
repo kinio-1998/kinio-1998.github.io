@@ -10,13 +10,9 @@ export const objEsp = {
     introduce: "Hola, Soy",
     title: "Desarrollador Web Jr | Apasionado por el código y los datos",
     description:
-      `Desarrollador web con una mentalidad autodidacta, curioso por naturaleza y apasionado por crear soluciones funcionales.
+      `Desarrollador web con una mentalidad autodidacta, curioso por naturaleza y apasionado por crear soluciones funcionales,me especializo en tecnologías como React, Firebase y Apps Script, y disfruto entender cómo funciona cada capa de un sistema,aunque mi enfoque principal es el desarrollo web, también me interesa el mundo de los datos y me motiva seguir aprendiendo con el objetivo de explorar áreas como la ciencia de datos.
 
-Me especializo en tecnologías como React, Firebase y Apps Script, y disfruto entender cómo funciona cada capa de un sistema.
-
-Aunque mi enfoque principal es el desarrollo web, también me interesa el mundo de los datos y me motiva seguir aprendiendo con el objetivo de explorar áreas como la ciencia de datos.
-
-Busco oportunidades remotas o presenciales que me permitan crecer, aportar valor y seguir evolucionando como profesional.`,
+      Busco oportunidades remotas o presenciales que me permitan crecer, aportar valor y seguir evolucionando como profesional.`,
     link: "/./docs/Cv_Li.Duarte.pdf",
     btnDownload: "Descargar CV",
     btnContact: "Contáctame",
@@ -33,7 +29,7 @@ Mi experiencia laboral incluye roles como administrador web y analista de incide
 Aunque mi enfoque actual es el desarrollo web, también me atrae el mundo de los datos. Estoy explorando caminos en ciencia de datos, ya que me apasiona el análisis, la lógica y el poder de tomar decisiones basadas en información real.
 
 Soy una persona curiosa, analítica, y con muchas ganas de seguir aprendiendo y creciendo.
-Busco oportunidades —remotas o presenciales— donde pueda aportar valor, aprender constantemente y convertirme en un mejor profesional cada día.`,
+Busco oportunidades donde pueda aportar valor, aprender constantemente para convertirme en un mejor profesional cada día.`,
     text: "Me destaco por mi compromiso, la mejora continua, el trabajo en equipo y la resolución de problemas. Disfruto aprender constantemente y participar en proyectos donde pueda combinar creatividad y lógica para obtener resultados que impacten de manera positiva.",
     lblSkills: "Habilidades Blandas",
     skills: [
