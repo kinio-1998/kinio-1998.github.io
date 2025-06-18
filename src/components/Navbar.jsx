@@ -46,7 +46,7 @@ const Navbar = ({ traducciones, toggleLanguage, language }) => {
                 onClick={toggleLanguage}
                 className="ml-2 text-sm px-2 py-1 text-green-600 border-green-600"
               >
-                {language === "es" ? <Flag country="US"/> : <Flag country="MX" />}
+                {language === "es" ? <Flag country="US" title="Inglés"/> : <Flag country="MX" title="Spanish" />}
               </button>
             </li>
           </ul>

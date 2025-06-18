@@ -5,7 +5,11 @@ export const Skills = ({traducciones}) => {
   return (
     <section className="py-24 px-4 bg-neutral-950" id="skills">
       <h2 className="text-3xl font-bold text-green-600 text-center mb-10">{traducciones.title}</h2>
-      <div className='max-h-96 overflow-y-auto'>
+      <div className='max-h-80 overflow-y-auto
+  [&::-webkit-scrollbar]:w-2
+  [&::-webkit-scrollbar-track]:rounded-full
+  dark:[&::-webkit-scrollbar-track]:bg-green-700
+  dark:[&::-webkit-scrollbar-thumb]:bg-green-500'>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center">
         {techIcons.list.filter((icon) => icon.show).map((skill) => (
           <motion.div

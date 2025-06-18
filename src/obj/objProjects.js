@@ -89,4 +89,21 @@ export const objProjects = [
       },
     },
   },
+  {
+    id: 6,
+    image: "/./img/crud_php.jpg",
+    link: "https://github.com/kinio-1998/crud_php",
+    techs: ["Php", "MySql", "HTML", "CSS", "JavaScript"],
+    translations: {
+      es: {
+        title: "CRUD PHP",
+        description:
+          "Este proyecto es un CRUD (Crear, Leer, Actualizar, Eliminar) desarrollado en PHP con una base de datos MySQL. Permite gestionar registros de manera sencilla y eficiente, proporcionando una interfaz amigable para realizar operaciones básicas de administración de datos."      },
+      en: {
+        title: "PHP CRUD",
+        description:
+          "This project is a CRUD (Create, Read, Update, Delete) developed in PHP with a MySQL database. It allows for simple and efficient record management, providing a user-friendly interface for basic data administration operations.",
+              },
+    },
+  },
 ];

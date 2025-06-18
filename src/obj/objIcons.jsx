@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt,FaNodeJs,FaWhatsapp, FaPython,FaGithub,FaLinkedin, FaGoogle, FaFileAlt, FaTelegram } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt,FaNodeJs,FaWhatsapp, FaPython,FaGithub,FaLinkedin, FaGoogle, FaFileAlt, FaTelegram, FaPhp } from "react-icons/fa";
 import { SiTailwindcss, SiVite, SiGooglesheets, SiGoogleappsscript, SiPostgresql,SiMysql, SiFirebase, SiExpress, SiVercel, SiFormspree  } from "react-icons/si";
 export const techIcons = {
   list: [
@@ -140,6 +140,12 @@ export const techIcons = {
       icon: <SiFormspree  className="text-red-600" />,
       show:true
     },
+    {
+      id:23,
+      name:"Php",
+      icon:<FaPhp className="text-purple-600" />,
+      show:true
+    }
   ],
   
   getIconByName(name) {
